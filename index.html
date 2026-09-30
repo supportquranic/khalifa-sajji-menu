@@ -569,28 +569,7 @@
                     <div class="space-y-2.5 text-xs">
 
 
-                        <!-- Delivery Area Selection (Inside / Outside Area) -->
-                        <div id="deliveryAreaContainer">
-                            <label class="block text-slate-800 font-bold mb-1">
-                                Select Delivery Zone <span class="text-[#D97706]">*</span>
-                            </label>
-                            <div class="grid grid-cols-2 gap-2">
-                                <label class="cursor-pointer">
-                                    <input type="radio" name="deliveryAreaRadio" value="inside" checked onchange="handleDeliveryAreaChange('inside')" class="peer sr-only">
-                                    <div class="p-2.5 rounded-xl border-2 peer-checked:border-[#D97706] peer-checked:bg-[#FFFBEB] peer-checked:text-[#D97706] border-slate-200 bg-slate-50 text-slate-700 text-center transition">
-                                        <span class="block font-bold text-[11px]">Inside Area</span>
-                                        <span class="block text-[10px] text-slate-500 peer-checked:text-[#D97706] font-semibold">Charges: PKR 50/-</span>
-                                    </div>
-                                </label>
-                                <label class="cursor-pointer">
-                                    <input type="radio" name="deliveryAreaRadio" value="outside" onchange="handleDeliveryAreaChange('outside')" class="peer sr-only">
-                                    <div class="p-2.5 rounded-xl border-2 peer-checked:border-[#D97706] peer-checked:bg-[#FFFBEB] peer-checked:text-[#D97706] border-slate-200 bg-slate-50 text-slate-700 text-center transition">
-                                        <span class="block font-bold text-[11px]">Outside Area</span>
-                                        <span class="block text-[10px] text-slate-500 peer-checked:text-[#D97706] font-semibold">Charges: PKR 100/-</span>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
+
 
                         <div id="addressFieldContainer">
                             <label class="block text-slate-800 font-bold mb-1">
@@ -1593,17 +1572,10 @@
         let searchQuery = '';
         let cart = [];
         let serviceType = 'Home Delivery'; // or 'Take Away'
-        let deliveryArea = 'inside'; // 'inside' (PKR 50) or 'outside' (PKR 100)
         const MIN_ORDER_AMOUNT = 0;
 
         function getDeliveryFee() {
-            if (serviceType === 'Take Away') return 0;
-            return deliveryArea === 'outside' ? 100 : 50;
-        }
-
-        function handleDeliveryAreaChange(area) {
-            deliveryArea = area;
-            updateCartUI();
+            return 0;
         }
         
         // Modal state
@@ -1997,18 +1969,18 @@
             const btnDelivery = document.getElementById('serviceBtnDelivery');
             const btnTakeAway = document.getElementById('serviceBtnTakeAway');
             const addressContainer = document.getElementById('addressFieldContainer');
-            const deliveryAreaContainer = document.getElementById('deliveryAreaContainer');
+
 
             if (type === 'Home Delivery') {
                 btnDelivery.className = 'p-2.5 rounded-xl border-2 border-[#D97706] bg-[#FFFBEB] text-[#D97706] flex items-center justify-center gap-1.5 transition font-bold';
                 btnTakeAway.className = 'p-2.5 rounded-xl border-2 border-slate-200 bg-slate-50 text-slate-700 flex items-center justify-center gap-1.5 transition font-bold';
                 if (addressContainer) addressContainer.classList.remove('hidden');
-                if (deliveryAreaContainer) deliveryAreaContainer.classList.remove('hidden');
+
             } else {
                 btnTakeAway.className = 'p-2.5 rounded-xl border-2 border-[#D97706] bg-[#FFFBEB] text-[#D97706] flex items-center justify-center gap-1.5 transition font-bold';
                 btnDelivery.className = 'p-2.5 rounded-xl border-2 border-slate-200 bg-slate-50 text-slate-700 flex items-center justify-center gap-1.5 transition font-bold';
                 if (addressContainer) addressContainer.classList.add('hidden');
-                if (deliveryAreaContainer) deliveryAreaContainer.classList.add('hidden');
+
             }
             updateCartUI();
         }
@@ -2033,8 +2005,7 @@
             const totalQty = cart.reduce((acc, item) => acc + item.qty, 0);
             const totalPrice = cart.reduce((acc, item) => acc + (item.unitPrice * item.qty), 0);
 
-            const deliveryFee = getDeliveryFee();
-            const grandTotal = totalPrice + (totalQty > 0 ? deliveryFee : 0);
+            const grandTotal = totalPrice;
 
             // Update floating cart bar
             const floatingBar = document.getElementById('floatingCartBar');
@@ -2091,26 +2062,7 @@
 
             // Update Bill Summary
             const billSubtotal = document.getElementById('billSubtotal');
-            const deliveryFeeLabel = document.getElementById('deliveryFeeLabel');
-            const billDeliveryZoneBadge = document.getElementById('billDeliveryZoneBadge');
-            const billTotal = document.getElementById('billTotal');
-            const minOrderAlert = document.getElementById('minOrderAlert');
-            const minOrderAlertText = document.getElementById('minOrderAlertText');
-
-            if (billSubtotal) billSubtotal.textContent = `PKR ${totalPrice.toLocaleString()}/-`;
             
-            if (deliveryFeeLabel && billDeliveryZoneBadge) {
-                if (serviceType === 'Take Away') {
-                    billDeliveryZoneBadge.textContent = 'Take Away (Free)';
-                    deliveryFeeLabel.textContent = 'PKR 0/-';
-                } else if (deliveryArea === 'outside') {
-                    billDeliveryZoneBadge.textContent = 'Outside Area (PKR 100)';
-                    deliveryFeeLabel.textContent = 'PKR 100/-';
-                } else {
-                    billDeliveryZoneBadge.textContent = 'Inside Area (PKR 50)';
-                    deliveryFeeLabel.textContent = 'PKR 50/-';
-                }
-            }
 
             if (billTotal) billTotal.textContent = `PKR ${grandTotal.toLocaleString()}/-`;
 
@@ -2214,8 +2166,7 @@
 
 
 
-            const deliveryFee = getDeliveryFee();
-            const grandTotal = totalPrice + deliveryFee;
+            const grandTotal = totalPrice;
 
             // Construct clean formatted WhatsApp text
             let message = `*NEW ORDER - KHALIFA SAJJI (BALOCHI SAJJI & BBQ)*\n`;
@@ -2223,8 +2174,7 @@
             message += `----------------------------\n`;
             message += `*ORDER TYPE:* ${serviceType.toUpperCase()}\n`;
                         if (serviceType === 'Home Delivery') {
-                const zoneText = deliveryArea === 'outside' ? 'Outside Area-e-Iqbal (Fee: PKR 100/-)' : 'Inside Area-e-Iqbal (Fee: PKR 50/-)';
-                message += `*DELIVERY ZONE:* ${zoneText}\n`;
+                    message += `*DELIVERY ZONE:* ${zoneText}\n`;
                 message += `*DELIVERY ADDRESS:*\n${address}\n`;
             }
             message += `----------------------------\n`;
@@ -2241,8 +2191,7 @@
             message += `----------------------------\n`;
             message += `*SUBTOTAL:* PKR ${totalPrice.toLocaleString()}/-\n`;
             if (serviceType === 'Home Delivery') {
-                message += `*DELIVERY CHARGES:* PKR ${deliveryFee.toLocaleString()}/-\n`;
-            }
+                }
             message += `*TOTAL PAYABLE:* PKR ${grandTotal.toLocaleString()}/-\n`;
             message += `----------------------------\n`;
 
@@ -2260,17 +2209,15 @@
             window.open(waUrl, '_blank');
 
             // Show Receipt Preview Modal
-            const deliveryAreaTitle = serviceType === 'Home Delivery' 
-                ? (deliveryArea === 'outside' ? 'Outside Area (PKR 100)' : 'Inside Area (PKR 50)') 
-                : 'Take Away (PKR 0)';
+            const deliveryAreaTitle = serviceType === 'Home Delivery' ? 'Home Delivery' : 'Take Away';
 
             document.getElementById('receiptPreviewBox').innerHTML = `
-                <div><strong>Service:</strong> ${serviceType} (${deliveryAreaTitle})</div>
+                <div><strong>Service:</strong> ${deliveryAreaTitle}</div>
                                 ${serviceType === 'Home Delivery' ? `<div><strong>Address:</strong> ${address}</div>` : ''}
                 <div><strong>Payment:</strong> ${payment}</div>
                 <div><strong>Total Items:</strong> ${cart.length} dish(es)</div>
                 <div><strong>Subtotal:</strong> PKR ${totalPrice.toLocaleString()}/-</div>
-                ${serviceType === 'Home Delivery' ? `<div><strong>Delivery Fee:</strong> PKR ${deliveryFee}/-</div>` : ''}
+                
                 <div class="text-[#D97706] font-bold text-sm pt-1"><strong>Total Payable:</strong> PKR ${grandTotal.toLocaleString()}/-</div>
             `;
 
