@@ -2164,7 +2164,6 @@
             message += `----------------------------\n`;
             message += `*ORDER TYPE:* ${serviceType.toUpperCase()}\n`;
                         if (serviceType === 'Home Delivery') {
-                    message += `*DELIVERY ZONE:* ${zoneText}\n`;
                 message += `*DELIVERY ADDRESS:*\n${address}\n`;
             }
             message += `----------------------------\n`;
@@ -2180,9 +2179,8 @@
 
             message += `----------------------------\n`;
             message += `*SUBTOTAL:* PKR ${totalPrice.toLocaleString()}/-\n`;
-            if (serviceType === 'Home Delivery') {
-                }
             message += `*TOTAL PAYABLE:* PKR ${grandTotal.toLocaleString()}/-\n`;
+
             message += `----------------------------\n`;
 
             if (notes) {
