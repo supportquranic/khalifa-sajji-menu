@@ -2062,21 +2062,11 @@
 
             // Update Bill Summary
             const billSubtotal = document.getElementById('billSubtotal');
-            
+            const billTotal = document.getElementById('billTotal');
 
+            if (billSubtotal) billSubtotal.textContent = `PKR ${totalPrice.toLocaleString()}/-`;
             if (billTotal) billTotal.textContent = `PKR ${grandTotal.toLocaleString()}/-`;
 
-            if (minOrderAlert) {
-                if (totalPrice > 0 && totalPrice < MIN_ORDER_AMOUNT) {
-                    const diff = MIN_ORDER_AMOUNT - totalPrice;
-                    minOrderAlert.classList.remove('hidden');
-                    if (minOrderAlertText) {
-                        minOrderAlertText.textContent = `Minimum order is PKR 1,000/- (Add PKR ${diff.toLocaleString()} more to proceed)`;
-                    }
-                } else {
-                    minOrderAlert.classList.add('hidden');
-                }
-            }
         }
 
         function updateCartItemQty(index, delta) {
