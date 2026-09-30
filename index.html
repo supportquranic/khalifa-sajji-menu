@@ -1,0 +1,2371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>KHALIFA SAJJI | Authentic Balochi Sajji & BBQ • Lahore</title>
+    <meta name="description" content="Khalifa Sajji Restaurant. Authentic Balochi Sajji, BBQ Platters, Handi Specialties, Karahis, Fried Fish & Fresh Naan in Lahore. Home Delivery & Take Away!">
+    
+    <!-- Google Fonts (Outfit & Plus Jakarta Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ffffff',
+                        secondary: {
+                            DEFAULT: '#D97706',
+                            hover: '#B45309',
+                            dark: '#4A2411',
+                            light: '#FFFBEB',
+                            border: '#FDE68A'
+                        },
+                        sajji: {
+                            gold: '#D97706',
+                            goldHover: '#B45309',
+                            brown: '#4A2411',
+                            brownDark: '#291206',
+                            cream: '#FFFBEB',
+                            border: '#FDE68A',
+                            dark: '#0f172a',
+                            bg: '#f8fafc',
+                            cardBg: '#ffffff'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px rgba(0, 0, 0, 0.04)',
+                        'card': '0 4px 15px rgba(217, 119, 6, 0.08)',
+                        'floating': '0 10px 30px rgba(217, 119, 6, 0.35)',
+                        'modal': '0 25px 60px -15px rgba(15, 23, 42, 0.25)'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        * {
+            -webkit-tap-highlight-color: transparent;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f8fafc;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #0f172a;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .fa, .fas, .far, .fal, .fab, .fa-solid, .fa-regular, .fa-brands {
+            font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", sans-serif !important;
+        }
+        .fa-brands {
+            font-family: "Font Awesome 6 Brands" !important;
+        }
+
+        .app-wrapper {
+            width: 100%;
+            max-width: 500px;
+            background-color: #ffffff;
+            min-height: 100vh;
+            position: relative;
+            box-shadow: 0 0 50px rgba(217, 119, 6, 0.06);
+            display: flex;
+            flex-direction: column;
+            border-left: 1px solid #e2e8f0;
+            border-right: 1px solid #e2e8f0;
+        }
+
+        @media (min-width: 1024px) {
+            .app-wrapper {
+                max-width: 540px;
+            }
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Active Category Pill Animation & Gradient using #D97706 */
+        .category-pill.active {
+            background: linear-gradient(135deg, #D97706 0%, #4A2411 100%);
+            color: #ffffff !important;
+            box-shadow: 0 6px 18px rgba(217, 119, 6, 0.35);
+            border-color: #4A2411;
+            font-weight: 800;
+        }
+
+        .category-pill.active .cat-icon {
+            transform: scale(1.12);
+        }
+
+        .glass-header {
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+        }
+
+        .glass-card-dark {
+            background: linear-gradient(135deg, #4A2411 0%, #291206 100%) !important;
+            backdrop-filter: blur(12px) !important;
+            border: 1px solid rgba(217, 119, 6, 0.35) !important;
+        }
+
+        .glass-card-light {
+            background: #ffffff !important;
+            border: 1px solid #e2e8f0 !important;
+        }
+
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        /* Live Shop Status Pulse Lights */
+        @keyframes pulse-green {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.75);
+            }
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 7px rgba(34, 197, 94, 0);
+            }
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+            }
+        }
+
+        @keyframes pulse-red {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.75);
+            }
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 7px rgba(239, 68, 68, 0);
+            }
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+            }
+        }
+
+        .status-light-green {
+            background-color: #22c55e !important;
+            animation: pulse-green 1.8s infinite;
+        }
+
+        .status-light-red {
+            background-color: #ef4444 !important;
+            animation: pulse-red 1.8s infinite;
+        }
+    </style>
+</head>
+<body class="selection:bg-[#D97706] selection:text-white">
+
+    <div class="app-wrapper pb-32">
+        
+        <!-- TOP STICKY HEADER -->
+        <header class="sticky top-0 z-40 glass-header border-b border-slate-200 transition-all duration-200 pt-2 sm:pt-3">
+            <!-- Brand & Quick Actions (WhatsApp & Contact) -->
+            <div class="px-4 pt-2.5 pb-2 flex items-center justify-between gap-2">
+                <div>
+                    <div class="flex items-center gap-2">
+                        <h1 class="font-display font-black text-2xl sm:text-3xl text-slate-900 leading-none tracking-tight">
+                            KHALIFA <span class="text-[#D97706]">SAJJI</span>
+                        </h1>
+                        <!-- Live Status Light Indicator (Green = 5pm-2am, Red = after 2am) -->
+                        <div 
+                            id="shopStatusBadge" 
+                            title="Live Shop Status (5:00 PM – 02:00 AM)" 
+                            class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-black border transition-all duration-300 select-none bg-amber-50 text-amber-900 border-emerald-300 shadow-sm"
+                        >
+                            <span id="shopStatusLight" class="w-2.5 h-2.5 rounded-full status-light-green inline-block shrink-0"></span>
+                            <span id="shopStatusText" class="tracking-wide">OPEN</span>
+                        </div>
+                    </div>
+                    <p class="text-[11px] text-slate-500 font-semibold mt-1 whitespace-nowrap">
+                        <span class="text-[#D97706] font-black tracking-wide uppercase">BALOCHI SAJJI & BBQ</span>
+                    </p>
+                </div>
+
+                <!-- Quick Action Buttons: Phone Modal & WhatsApp -->
+                <div class="flex items-center gap-2 shrink-0">
+                    <!-- Phone Contacts Trigger -->
+                    <button onclick="togglePhoneModal()" title="Call KHALIFA SAJJI" class="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-800 flex items-center justify-center text-sm shadow-sm active:scale-95 transition">
+                        <i class="fa-solid fa-phone text-[#D97706]"></i>
+                    </button>
+                    <!-- WhatsApp Direct Order -->
+                    <a href="https://wa.me/923092114455" target="_blank" title="WhatsApp Order: 0309-2114455" class="w-9 h-9 rounded-full bg-[#D97706] hover:bg-[#B45309] text-white flex items-center justify-center text-base shadow-md shadow-[#D97706]/30 active:scale-95 transition">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Address Bar -->
+            <div class="px-4 pb-1">
+                <div class="flex items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-500 font-semibold">
+                    <i class="fa-solid fa-location-dot text-[#D97706] text-xs"></i>
+                    <span>6B Main Raiwind Road, Lahore</span>
+                </div>
+            </div>
+
+            <!-- Operating Timing Info -->
+            <div class="px-4 pb-2 flex items-center justify-start text-[11px] font-bold text-slate-600 border-t border-slate-100 pt-1.5">
+                <div class="flex items-center gap-1 text-slate-500 text-[10px]" id="shopHoursNoticeContainer">
+                    <span id="shopHoursDot" class="w-1.5 h-1.5 rounded-full bg-amber-500 inline-block"></span>
+                    <span id="shopHoursNotice">05:00 PM – 02:00 AM</span>
+                </div>
+            </div>
+
+            <!-- Search Input Box -->
+            <div class="px-4 pb-2.5">
+                <div class="relative flex items-center">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 text-slate-400 text-sm"></i>
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Search menu (e.g. Sajji, Karahi, Handi, Kabab, Naan)..." 
+                        class="w-full bg-slate-50 text-slate-900 text-xs font-medium placeholder-slate-400 pl-9 pr-8 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-[#D97706] focus:ring-2 focus:ring-[#D97706]/20 transition shadow-inner"
+                        oninput="handleSearch(this.value)"
+                    >
+                    <button id="clearSearchBtn" onclick="clearSearch()" class="hidden absolute right-3 text-slate-400 hover:text-slate-700">
+                        <i class="fa-solid fa-circle-xmark text-sm"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Scrollable Category Filter Pills -->
+            <div class="px-3 pb-2.5 overflow-x-auto no-scrollbar flex items-center gap-2" id="categoryNav">
+                <!-- Dynamically Rendered Category Pills -->
+            </div>
+        </header>
+
+        <!-- HERO HIGHLIGHT CAROUSEL / FEATURED SPECIAL -->
+        <div class="px-4 py-3" id="heroBanner">
+            <div class="glass-card-dark rounded-2xl p-4 text-white relative overflow-hidden shadow-lg flex items-center justify-between">
+                <div class="relative z-10 max-w-[62%]">
+                    <span class="bg-white text-[#4A2411] font-black text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-md inline-block mb-1 shadow-sm">
+                        CHEF RECOMMENDED
+                    </span>
+                    <h3 class="font-display text-base font-black leading-tight text-white drop-shadow-sm">
+                        Khalifa Special Platter
+                    </h3>
+                    <p class="text-[11px] text-amber-100 font-medium mt-0.5 mb-2.5 line-clamp-2">
+                        Quarter Sajji, 1-Portion Handi, Chicken Tikka 8 Pcs, Chicken Kabab 2 Pcs, Roghni Naan &amp; Gulab Jamun!
+                    </p>
+                    <button onclick="openItemModalById('khalifa_special_platter')" class="bg-white hover:bg-amber-50 text-[#4A2411] font-black text-xs px-3.5 py-1.5 rounded-xl shadow-md active:scale-95 transition flex items-center gap-1.5">
+                        Order Platter • PKR 3,000/- <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+                <div class="relative z-10 shrink-0 w-28 h-28 -mr-2">
+                    <img 
+                        src="images/khalifa_special_platter.jpg" 
+                        alt="Khalifa Special Platter"
+                        class="w-full h-full object-cover rounded-2xl shadow-2xl rotate-2 border-2 border-amber-300/50" 
+                        onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1541696432-82c6da8ce7bf?auto=format&fit=crop&w=300&q=80'"
+                    >
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- SEARCH / CATEGORY STATUS HEADER -->
+        <div id="sectionHeaderBar" class="px-4 pt-2 pb-1 flex items-center justify-between">
+            <h2 class="text-sm font-black text-slate-900 font-display flex items-center gap-2" id="currentSectionTitle">
+                All Menu Items
+            </h2>
+            <span id="currentSectionBadge" class="text-[11px] font-bold text-[#D97706] bg-[#FFFBEB] border border-[#FDE68A] px-2.5 py-0.5 rounded-full">
+                Full Khalifa Sajji Menu
+            </span>
+        </div>
+
+        <!-- MAIN PRODUCTS CONTAINER -->
+        <main class="px-4 space-y-3.5 pt-1" id="menuContainer">
+            <!-- Rendered by JavaScript -->
+        </main>
+
+        <!-- EMPTY SEARCH STATE -->
+        <div id="emptySearchState" class="hidden py-16 text-center px-4">
+            <div class="w-16 h-16 bg-slate-100 text-slate-400 rounded-full flex items-center justify-center mx-auto text-2xl mb-3 border border-slate-200">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <h3 class="font-bold text-slate-900 text-base">No dishes found</h3>
+            <p class="text-xs text-slate-500 mt-1 max-w-xs mx-auto">We couldn't find any dishes matching your search. Try searching for "Sajji", "Platter", "Karahi", "Handi", "Malai Boti", or "Fish".</p>
+            <button onclick="clearSearch()" class="mt-4 bg-[#D97706] hover:bg-[#B45309] text-white text-xs font-black px-4 py-2 rounded-xl shadow-sm">
+                Show Full Menu
+            </button>
+        </div>
+
+        <!-- STORE INFO BANNER / STATS & FOOTER -->
+        <div class="px-4 pt-6 pb-28" id="storeInfoBanner">
+            <div class="glass-card-dark rounded-3xl p-5 text-white shadow-xl relative overflow-hidden">
+                <div class="absolute -right-8 -bottom-8 w-40 h-40 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
+                <div class="relative z-10 space-y-4">
+                    <!-- Name & Subtitle -->
+                    <div class="flex items-start justify-between gap-2 border-b border-white/20 pb-3">
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <h3 class="font-display font-black text-2xl tracking-tight text-white">KHALIFA SAJJI</h3>
+                                <span class="bg-white text-[#4A2411] text-[10px] font-black px-2 py-0.5 rounded uppercase">Balochi Sajji & BBQ</span>
+                            </div>
+                            <p class="text-xs text-amber-100 font-bold tracking-wider mt-0.5 uppercase">BALOCHI SAJJI & BBQ</p>
+                        </div>
+                        <span class="bg-white/20 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-1 rounded-full shrink-0 border border-white/30">
+                            Delivery &amp; Take Away
+                        </span>
+                    </div>
+
+                    <!-- Address & Location -->
+                    <div class="space-y-1.5 text-xs text-amber-50">
+                        <div class="flex items-start gap-2">
+                            <i class="fa-solid fa-location-dot text-white mt-0.5 shrink-0"></i>
+                            <div>
+                                <strong class="text-white block font-bold">Address:</strong>
+                                <span>6B MAIN RAIWIND ROAD, LAHORE</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quality Promise Badges -->
+                    <div class="pt-2 border-t border-white/20">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-amber-100 block mb-2">Our Quality Promise:</span>
+                        <div class="grid grid-cols-3 gap-2 text-center text-[10px]">
+                            <div class="bg-white/15 backdrop-blur-sm rounded-xl py-2 px-1 border border-white/20 flex flex-col items-center justify-center">
+                                <i class="fa-solid fa-leaf text-amber-200 text-sm mb-1"></i>
+                                <span class="text-white font-bold">Fresh</span>
+                                <span class="text-amber-100 text-[9px]">Ingredients</span>
+                            </div>
+                            <div class="bg-white/15 backdrop-blur-sm rounded-xl py-2 px-1 border border-white/20 flex flex-col items-center justify-center">
+                                <i class="fa-solid fa-utensils text-amber-200 text-sm mb-1"></i>
+                                <span class="text-white font-bold">Authentic</span>
+                                <span class="text-amber-100 text-[9px]">Flavors</span>
+                            </div>
+                            <div class="bg-white/15 backdrop-blur-sm rounded-xl py-2 px-1 border border-white/20 flex flex-col items-center justify-center">
+                                <i class="fa-solid fa-user-tie text-amber-200 text-sm mb-1"></i>
+                                <span class="text-white font-bold">Expert</span>
+                                <span class="text-amber-100 text-[9px]">Sajji Master</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Under Footer: Clickable WhatsApp Attribution for Talha Muzammil -->
+            <div class="text-center mt-5">
+                <a href="https://wa.me/923294355677" target="_blank" class="inline-block group py-1 px-3 rounded-xl hover:bg-slate-100 transition">
+                    <span class="text-xs font-semibold text-slate-600 group-hover:text-[#D97706] transition block">
+                        Designed by <strong class="text-slate-900 group-hover:text-[#D97706] font-bold underline decoration-[#D97706]/40">Talha Muzammil</strong>
+                    </span>
+                    <span class="text-[10px] text-slate-400 group-hover:text-[#D97706] font-medium flex items-center justify-center gap-1 mt-0.5 transition">
+                        <i class="fa-brands fa-whatsapp text-xs text-[#D97706]"></i> Click to contact
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <!-- FLOATING BOTTOM BASKET BAR -->
+        <div id="floatingCartBar" class="fixed bottom-0 left-0 right-0 z-50 flex justify-center p-3 pointer-events-none transition-all duration-300 transform translate-y-24 opacity-0">
+            <div class="w-full max-w-[500px] pointer-events-auto">
+                <button 
+                    onclick="openCartDrawer()" 
+                    class="w-full bg-gradient-to-r from-[#4A2411] via-[#B45309] to-[#D97706] text-white rounded-2xl p-3.5 shadow-floating flex items-center justify-between active:scale-[0.98] transition border border-[#FDE68A]/30"
+                >
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-white text-[#D97706] flex items-center justify-center font-black text-sm relative shadow-sm">
+                            <i class="fa-solid fa-basket-shopping text-base"></i>
+                            <span id="floatingCartBadge" class="absolute -top-1.5 -right-1.5 bg-[#4A2411] text-white text-[10px] font-black w-5 h-5 rounded-full flex items-center justify-center border-2 border-white shadow-sm">
+                                0
+                            </span>
+                        </div>
+                        <div class="text-left">
+                            <span class="text-[10px] font-extrabold text-amber-100 uppercase tracking-wider block">Your Khalifa Sajji Basket</span>
+                            <span class="text-base font-black tracking-tight text-white" id="floatingCartTotal">PKR 0/-</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 font-black text-xs bg-white text-[#D97706] px-3.5 py-2 rounded-xl shadow-sm hover:bg-amber-50 transition">
+                        <span>Checkout</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- PHONE CONTACTS MODAL -->
+    <div id="phoneModal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300 p-4">
+        <div class="w-full max-w-xs bg-white border border-slate-200 rounded-3xl p-5 text-center shadow-modal transform scale-95 transition-all duration-300" id="phoneModalCard">
+            <div class="w-12 h-12 bg-[#FFFBEB] text-[#D97706] rounded-2xl flex items-center justify-center text-xl mx-auto mb-3 border border-[#FDE68A]">
+                <i class="fa-solid fa-headset"></i>
+            </div>
+            <h3 class="font-display font-black text-lg text-slate-900">Contact KHALIFA SAJJI</h3>
+            <p class="text-xs text-slate-500 mt-0.5 mb-4">Choose a number for direct phone call or WhatsApp order:</p>
+            
+            <div class="space-y-2.5 text-left mb-4">
+                <!-- Contact 1 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-3 flex items-center justify-between">
+                    <div>
+                        <span class="text-[10px] font-bold text-slate-500 uppercase block">Hotline &amp; WhatsApp</span>
+                        <strong class="text-sm font-black text-slate-900">0309-2114455</strong>
+                    </div>
+                    <div class="flex items-center gap-1.5">
+                        <a href="tel:03092114455" class="w-8 h-8 rounded-xl bg-[#D97706] text-white flex items-center justify-center text-xs shadow-sm hover:bg-[#B45309]">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                        <a href="https://wa.me/923092114455" target="_blank" class="w-8 h-8 rounded-xl bg-[#D97706] text-white flex items-center justify-center text-xs shadow-sm hover:bg-[#B45309]">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <button onclick="togglePhoneModal()" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold py-2.5 rounded-xl">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <!-- ITEM DETAIL / CUSTOMIZATION MODAL -->
+    <div id="itemModal" class="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-slate-900/60 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300">
+        <div class="w-full max-w-[500px] bg-white border border-slate-200 rounded-t-[32px] sm:rounded-3xl max-h-[90vh] flex flex-col shadow-modal transform translate-y-full transition-transform duration-300" id="itemModalCard">
+            <!-- Modal Header with Image -->
+            <div class="relative h-48 sm:h-52 w-full shrink-0 bg-slate-900 rounded-t-[32px] sm:rounded-t-3xl overflow-hidden">
+                <img id="modalItemImage" src="" alt="Asian Dish" class="w-full h-full object-cover opacity-90" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1541696432-82c6da8ce7bf?auto=format&fit=crop&w=400&q=80'">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent"></div>
+                <button onclick="closeItemModal()" class="absolute top-4 right-4 w-9 h-9 bg-white/90 hover:bg-white text-slate-800 rounded-full flex items-center justify-center backdrop-blur-md transition border border-slate-200 shadow-sm">
+                    <i class="fa-solid fa-xmark text-base"></i>
+                </button>
+                <div class="absolute bottom-3 left-4 right-4 text-white">
+                    <span id="modalItemCategoryBadge" class="text-[10px] font-black uppercase bg-[#D97706] text-white px-2 py-0.5 rounded-md inline-block mb-1 shadow-sm">
+                        Category
+                    </span>
+                    <h3 id="modalItemTitle" class="font-display font-black text-xl leading-tight text-white drop-shadow-sm">Item Name</h3>
+                    <p id="modalItemDesc" class="text-xs text-amber-100 line-clamp-2 mt-0.5">Item description goes here</p>
+                </div>
+            </div>
+
+            <!-- Modal Body (Scrollable Options) -->
+            <div class="p-4 overflow-y-auto flex-1 space-y-4 no-scrollbar" id="modalOptionsContainer">
+                <!-- Options rendered dynamically -->
+            </div>
+
+            <!-- Modal Footer (Quantity & Add to Cart) -->
+            <div class="p-4 border-t border-slate-200 bg-slate-50 rounded-b-[32px] sm:rounded-b-3xl flex items-center justify-between gap-3">
+                <!-- Qty buttons -->
+                <div class="flex items-center bg-white rounded-xl border border-slate-300 p-1 shadow-sm">
+                    <button onclick="changeModalQty(-1)" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 flex items-center justify-center text-xs font-bold active:scale-95 transition">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+                    <span id="modalQtyDisplay" class="w-8 text-center font-black text-sm text-[#D97706]">1</span>
+                    <button onclick="changeModalQty(1)" class="w-8 h-8 rounded-lg bg-[#D97706] text-white flex items-center justify-center text-xs font-black active:scale-95 transition">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+
+                <!-- Add Button -->
+                <button id="modalAddToCartBtn" onclick="confirmAddToCart()" class="flex-1 bg-[#D97706] hover:bg-[#B45309] text-white font-black text-xs py-3.5 px-4 rounded-xl shadow-md flex items-center justify-between active:scale-[0.98] transition">
+                    <span>Add To Khalifa Sajji Basket</span>
+                    <span id="modalFinalPrice" class="bg-white/20 px-2.5 py-0.5 rounded-lg text-white font-extrabold">PKR 0/-</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CART & CHECKOUT DRAWER -->
+    <div id="cartDrawer" class="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-slate-900/60 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300">
+        <div class="w-full max-w-[500px] bg-white border border-slate-200 rounded-t-[32px] sm:rounded-3xl max-h-[92vh] h-full flex flex-col shadow-modal transform translate-y-full transition-transform duration-300" id="cartDrawerCard">
+            <!-- Header -->
+            <div class="px-4 py-3.5 border-b border-slate-200 flex items-center justify-between bg-slate-50 rounded-t-[32px] sm:rounded-t-3xl">
+                <div class="flex items-center gap-2.5">
+                    <div class="w-8 h-8 rounded-full bg-[#FFFBEB] border border-[#FDE68A] text-[#D97706] flex items-center justify-center text-sm">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display font-black text-base text-slate-900">KHALIFA SAJJI Order Basket</h3>
+                        <span id="drawerItemCountText" class="text-[11px] text-slate-500 font-semibold">0 dishes selected</span>
+                    </div>
+                </div>
+                <button onclick="closeCartDrawer()" class="w-8 h-8 rounded-full bg-slate-200 text-slate-700 hover:bg-slate-300 flex items-center justify-center transition">
+                    <i class="fa-solid fa-xmark text-sm"></i>
+                </button>
+            </div>
+
+            <!-- Content Area (Scrollable) -->
+            <div class="p-4 overflow-y-auto flex-1 space-y-4 no-scrollbar" id="cartContentArea">
+                <!-- Cart Items List -->
+                <div id="cartItemsList" class="space-y-2.5">
+                    <!-- Rendered by JS -->
+                </div>
+
+                <!-- Empty Cart View -->
+                <div id="emptyCartView" class="hidden py-12 text-center">
+                    <div class="w-16 h-16 bg-[#FFFBEB] text-[#D97706] border border-[#FDE68A] rounded-full flex items-center justify-center mx-auto text-2xl mb-3">
+                        <i class="fa-solid fa-bowl-rice"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-900 text-base">Your basket is empty</h4>
+                    <p class="text-xs text-slate-500 mt-1 max-w-xs mx-auto">Explore our Balochi Sajji & BBQ delicacies and add delicious Sajji, Platters, Handi, Karahi or BBQ Botis!</p>
+                    <button onclick="closeCartDrawer()" class="mt-4 bg-[#D97706] text-white text-xs font-black px-5 py-2.5 rounded-xl shadow-md hover:bg-[#B45309]">
+                        Browse Sajji & BBQ Menu
+                    </button>
+                </div>
+
+                <!-- Checkout Form & Details -->
+                <div id="checkoutFormSection" class="pt-2 space-y-3.5 border-t border-slate-200">
+                    <h4 class="font-display font-bold text-xs uppercase tracking-wider text-[#D97706] flex items-center gap-1.5">
+                        <i class="fa-solid fa-motorcycle text-[#D97706]"></i> Order Service &amp; Address
+                    </h4>
+
+                    <!-- Service Type Selector (Delivery / Take Away) -->
+                    <div class="grid grid-cols-2 gap-2 text-xs font-bold">
+                        <button type="button" onclick="selectServiceType('Home Delivery')" id="serviceBtnDelivery" class="p-2.5 rounded-xl border-2 border-[#D97706] bg-[#FFFBEB] text-[#D97706] flex items-center justify-center gap-1.5 transition">
+                            <i class="fa-solid fa-truck-ramp-box"></i>
+                            <span>Home Delivery</span>
+                        </button>
+                        <button type="button" onclick="selectServiceType('Take Away')" id="serviceBtnTakeAway" class="p-2.5 rounded-xl border-2 border-slate-200 bg-slate-50 text-slate-700 flex items-center justify-center gap-1.5 transition">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <span>Take Away</span>
+                        </button>
+                    </div>
+
+                    <!-- Customer Contact & Address Input Fields -->
+                    <div class="space-y-2.5 text-xs">
+
+
+                        <!-- Delivery Area Selection (Inside / Outside Area) -->
+                        <div id="deliveryAreaContainer">
+                            <label class="block text-slate-800 font-bold mb-1">
+                                Select Delivery Zone <span class="text-[#D97706]">*</span>
+                            </label>
+                            <div class="grid grid-cols-2 gap-2">
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="deliveryAreaRadio" value="inside" checked onchange="handleDeliveryAreaChange('inside')" class="peer sr-only">
+                                    <div class="p-2.5 rounded-xl border-2 peer-checked:border-[#D97706] peer-checked:bg-[#FFFBEB] peer-checked:text-[#D97706] border-slate-200 bg-slate-50 text-slate-700 text-center transition">
+                                        <span class="block font-bold text-[11px]">Inside Area</span>
+                                        <span class="block text-[10px] text-slate-500 peer-checked:text-[#D97706] font-semibold">Charges: PKR 50/-</span>
+                                    </div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="deliveryAreaRadio" value="outside" onchange="handleDeliveryAreaChange('outside')" class="peer sr-only">
+                                    <div class="p-2.5 rounded-xl border-2 peer-checked:border-[#D97706] peer-checked:bg-[#FFFBEB] peer-checked:text-[#D97706] border-slate-200 bg-slate-50 text-slate-700 text-center transition">
+                                        <span class="block font-bold text-[11px]">Outside Area</span>
+                                        <span class="block text-[10px] text-slate-500 peer-checked:text-[#D97706] font-semibold">Charges: PKR 100/-</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div id="addressFieldContainer">
+                            <label class="block text-slate-800 font-bold mb-1">
+                                Delivery Address / Landmark <span class="text-[#D97706]">*</span>
+                            </label>
+                            <textarea 
+                                id="custAddress" 
+                                rows="2" 
+                                placeholder="House / Flat #, Street, Phase / Area (e.g. 6B Main Raiwind Road, Lahore)" 
+                                class="w-full bg-slate-50 text-slate-900 border border-slate-300 focus:border-[#D97706] rounded-xl px-3 py-2.5 text-xs focus:outline-none placeholder-slate-400 shadow-inner"
+                            ></textarea>
+                        </div>
+
+                        <!-- Special Instructions -->
+                        <div>
+                            <label class="block text-slate-700 font-semibold mb-1">Kitchen Instructions (Optional)</label>
+                            <input type="text" id="custNotes" placeholder="e.g. Extra spicy, extra cutlery, less chili" class="w-full bg-slate-50 text-slate-900 border border-slate-300 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-[#D97706]">
+                        </div>
+
+                        <!-- Payment Method Selector -->
+                        <div>
+                            <label class="block text-slate-700 font-semibold mb-1">Select Payment Method</label>
+                            <select id="custPayment" onchange="handlePaymentChange(this.value)" class="w-full bg-slate-50 text-slate-900 border border-slate-300 rounded-xl px-3 py-2.5 text-xs focus:outline-none focus:border-[#D97706] font-medium">
+                                <option value="Cash on Delivery" selected>Cash on Delivery (COD)</option>
+                                <option value="JazzCash / Easypaisa / Online Transfer">JazzCash / Easypaisa / Online Transfer</option>
+                            </select>
+                        </div>
+
+                        <!-- PAYMENT ACCOUNTS DETAILS CARD WITH 1-CLICK COPY BUTTONS -->
+                        <div id="onlinePaymentCard" class="hidden bg-[#FFFBEB] border border-[#FDE68A] rounded-2xl p-3.5 space-y-3 shadow-sm">
+                            <div class="flex items-center justify-between border-b border-[#FDE68A]/60 pb-2">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-7 h-7 rounded-lg bg-[#D97706] text-white flex items-center justify-center font-black text-xs">
+                                        <i class="fa-solid fa-money-bill-transfer"></i>
+                                    </span>
+                                    <div>
+                                        <h5 class="text-xs font-black text-slate-900">JazzCash &amp; Easypaisa Accounts</h5>
+                                        <span class="text-[10px] text-slate-600">Account Title: <strong class="text-slate-900 font-bold">Shakir Hussain</strong></span>
+                                    </div>
+                                </div>
+                                <span class="text-[9px] font-black uppercase tracking-wider bg-white text-[#D97706] border border-[#FDE68A] px-2 py-0.5 rounded">
+                                    Active
+                                </span>
+                            </div>
+
+                            <!-- JazzCash Account -->
+                            <div class="bg-white p-2.5 rounded-xl border border-[#FDE68A] flex items-center justify-between gap-2">
+                                <div class="min-w-0 flex-1">
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="text-[10px] font-bold text-amber-700 bg-amber-50 border border-amber-200 px-1.5 py-0.2 rounded">JazzCash</span>
+                                        <span class="text-[10px] text-slate-500 font-medium">Title: <strong class="text-slate-800">Shakir Hussain</strong></span>
+                                    </div>
+                                    <span class="text-xs font-black text-[#D97706] tracking-wider font-mono block mt-0.5">0316-5265885</span>
+                                </div>
+                                <button 
+                                    type="button"
+                                    onclick="copyToClipboard('03165265885', 'accBtn1')" 
+                                    id="accBtn1"
+                                    class="bg-[#D97706] hover:bg-[#B45309] text-white text-xs font-black px-3 py-1.5 rounded-lg flex items-center gap-1.5 active:scale-95 transition shadow-sm shrink-0"
+                                >
+                                    <i class="fa-regular fa-copy"></i>
+                                    <span>Copy</span>
+                                </button>
+                            </div>
+
+                            <!-- Easypaisa Account -->
+                            <div class="bg-white p-2.5 rounded-xl border border-[#FDE68A] flex items-center justify-between gap-2">
+                                <div class="min-w-0 flex-1">
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="text-[10px] font-bold text-amber-800 bg-amber-50 border border-amber-300 px-1.5 py-0.2 rounded">Easypaisa</span>
+                                        <span class="text-[10px] text-slate-500 font-medium">Title: <strong class="text-slate-800">Shakir Hussain</strong></span>
+                                    </div>
+                                    <span class="text-xs font-black text-[#D97706] tracking-wider font-mono block mt-0.5">0316-5265885</span>
+                                </div>
+                                <button 
+                                    type="button"
+                                    onclick="copyToClipboard('03165265885', 'accBtn2')" 
+                                    id="accBtn2"
+                                    class="bg-[#D97706] hover:bg-[#B45309] text-white text-xs font-black px-3 py-1.5 rounded-lg flex items-center gap-1.5 active:scale-95 transition shadow-sm shrink-0"
+                                >
+                                    <i class="fa-regular fa-copy"></i>
+                                    <span>Copy</span>
+                                </button>
+                            </div>
+
+                            <p class="text-[10px] text-slate-500 italic text-center">
+                                * Transfer payment &amp; share screenshot on WhatsApp (0309-2114455) after order submission.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Bill Summary -->
+                    <div class="bg-slate-50 rounded-2xl p-3.5 space-y-2 border border-slate-200 text-xs">
+
+
+                        <div class="flex justify-between text-slate-600">
+                            <span>Subtotal</span>
+                            <span class="font-bold text-slate-900" id="billSubtotal">PKR 0/-</span>
+                        </div>
+
+                        <div class="pt-2 border-t border-slate-200 flex justify-between items-center">
+                            <div>
+                                <span class="font-black text-slate-900 text-sm block">Estimated Total</span>
+
+                            </div>
+                            <span class="font-black text-[#D97706] text-lg font-display" id="billTotal">PKR 0/-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drawer Footer Buttons -->
+            <div class="p-4 border-t border-slate-200 bg-slate-50 rounded-b-[32px] sm:rounded-b-3xl" id="drawerFooterActions">
+                <button 
+                    onclick="submitOrderToWhatsApp()" 
+                    id="submitWhatsappBtn"
+                    class="w-full bg-[#D97706] hover:bg-[#B45309] text-white font-black text-sm py-4 px-4 rounded-xl shadow-lg shadow-[#D97706]/30 flex items-center justify-center gap-2 active:scale-[0.98] transition"
+                >
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span>Send Order via WhatsApp (0321-0083737)</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ORDER SUCCESS MODAL -->
+    <div id="successModal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300 p-4">
+        <div class="w-full max-w-sm bg-white border border-slate-200 rounded-3xl p-6 text-center shadow-modal transform scale-95 transition-all duration-300" id="successModalCard">
+            <div class="w-16 h-16 bg-[#FFFBEB] border border-[#FDE68A] text-[#D97706] rounded-full flex items-center justify-center text-3xl mx-auto mb-3 shadow-sm">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 class="font-display font-black text-xl text-slate-900">Order Sent to KHALIFA SAJJI!</h3>
+            <p class="text-xs text-slate-600 mt-1 mb-4">Your order details were formatted and opened in WhatsApp chat for the KHALIFA SAJJI kitchen manager to confirm immediately.</p>
+            
+            <div class="bg-slate-50 rounded-2xl p-3.5 text-left text-xs mb-4 border border-slate-200 font-mono space-y-1 text-slate-800" id="receiptPreviewBox">
+                <!-- Preview summary -->
+            </div>
+
+            <button onclick="closeSuccessModal()" class="w-full bg-[#D97706] hover:bg-[#B45309] text-white text-xs font-black py-3 rounded-xl shadow-md">
+                Done & Continue Browsing
+            </button>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast" class="fixed top-5 left-1/2 -translate-x-1/2 z-50 bg-slate-900 text-white text-xs font-black px-4 py-2.5 rounded-full shadow-2xl flex items-center gap-2 transform -translate-y-16 opacity-0 transition-all duration-300 pointer-events-none border border-slate-700">
+        <i class="fa-solid fa-circle-check text-[#D97706]"></i>
+        <span id="toastMsg">Added to basket!</span>
+    </div>
+
+    <!-- JAVASCRIPT APPLICATION LOGIC -->
+    <script>
+        // --- 1. PRODUCT DATABASE FOR KHALIFA SAJJI (BALOCHI SAJJI & BBQ) ---
+        const RESTAURANT_CONFIG = {
+            name: "KHALIFA SAJJI",
+            subtitle: "BALOCHI SAJJI & BBQ",
+            tagline: "BALOCHI SAJJI & BBQ",
+            services: "HOME DELIVERY & TAKE AWAY",
+            address: "6B MAIN RAIWIND ROAD, LAHORE",
+            phonePrimary: "0309-2114455",
+            phoneSecondary: "0309-2114455",
+            waPrimary: "923092114455",
+            waSecondary: "923092114455"
+        };
+
+        const MENU_DATA = {
+        "categories": [
+                {
+                        "id": "all",
+                        "name": "All Menu",
+                        "badge": "All Dishes"
+                },
+                {
+                        "id": "platters",
+                        "name": "Platters",
+                        "badge": "Special Feasts"
+                },
+                {
+                        "id": "sajji_rice",
+                        "name": "Balochi Sajji & Rice",
+                        "badge": "Signature Sajji"
+                },
+                {
+                        "id": "fish_specialties",
+                        "name": "Fish Specialties",
+                        "badge": "Fried & Charcoal Fish"
+                },
+                {
+                        "id": "bbq_special",
+                        "name": "Barbecue (BBQ)",
+                        "badge": "Live Charcoal BBQ"
+                },
+                {
+                        "id": "handi_specialties",
+                        "name": "Handi Specialties",
+                        "badge": "Claypot Handis"
+                },
+                {
+                        "id": "karahis",
+                        "name": "Pakistani Cuisine",
+                        "badge": "Desi Karahis"
+                },
+                {
+                        "id": "tandoor_bread",
+                        "name": "Tandoor (Bread)",
+                        "badge": "Fresh Naan & Roti"
+                },
+                {
+                        "id": "desserts_salad",
+                        "name": "Desserts & Salad",
+                        "badge": "Sweets & Raita"
+                },
+                {
+                        "id": "beverages",
+                        "name": "Beverages",
+                        "badge": "Chilled Drinks"
+                }
+        ],
+        "items": [
+                {
+                        "id": "khalifa_special_platter",
+                        "category": "platters",
+                        "name": "Khalifa Special Platter (2\u20133 Persons)",
+                        "desc": "1-Quarter Sajji, 1-Portion Handi, Chicken Tikka 8 Pcs, Chicken Kabab 2 Pcs, 2-Roghni Naan, Gulab Jamun.",
+                        "price": 3000,
+                        "image": "images/khalifa_special_platter.jpg",
+                        "isPopular": true,
+                        "type": "fixed"
+                },
+                {
+                        "id": "khalifa_jumbo_platter",
+                        "category": "platters",
+                        "name": "Khalifa Jumbo Platter (4\u20135 Persons)",
+                        "desc": "1-Half Sajji, 1-Portion Handi, Malai Boti 8 Pcs, Rajasthani Boti 8 Pcs, Reshmi Kabab 3 Pcs, Beef Kabab 3 Pcs, 1 Plain Naan, 1 Roghni Naan, 1 Kalwanji Naan, 1 Garlic Naan, Gulab Jamun.",
+                        "price": 5800,
+                        "image": "images/khalifa_jumbo_platter.jpg",
+                        "isPopular": true,
+                        "type": "fixed"
+                },
+                {
+                        "id": "khalifa_family_platter",
+                        "category": "platters",
+                        "name": "Khalifa Family Platter (7\u20138 Persons)",
+                        "desc": "1-Full Sajji, 1-Full Handi Chicken, Reshmi Kabab 3 Pcs, Cheese Kabab 3 Pcs, Malai Boti 8 Pcs, Achari Boti 8 Pcs, Rajasthani Boti 8 Pcs, Beef Kabab 3 Pcs, 2 Plain Naan, 2 Roghni Naan, 2 Kalwanji Naan, 2 Garlic Naan, 1 Roti Per Head.",
+                        "price": 9000,
+                        "image": "images/khalifa_family_platter.jpg",
+                        "isPopular": true,
+                        "type": "fixed"
+                },
+                {
+                        "id": "full_sajji",
+                        "category": "sajji_rice",
+                        "name": "Full Sajji",
+                        "desc": "Authentic Balochi whole chicken sajji slow-roasted over natural charcoal and seasoned with traditional rock salt and spices.",
+                        "price": 2400,
+                        "image": "images/full_sajji.jpg",
+                        "isPopular": true,
+                        "type": "fixed"
+                },
+                {
+                        "id": "half_sajji",
+                        "category": "sajji_rice",
+                        "name": "Half Sajji",
+                        "desc": "Traditional half portion charcoal slow-roasted Balochi chicken sajji, crispy outside and succulent inside.",
+                        "price": 1250,
+                        "image": "images/half_sajji.jpg",
+                        "isPopular": true,
+                        "type": "fixed"
+                },
+                {
+                        "id": "quarter_sajji",
+                        "category": "sajji_rice",
+                        "name": "Quarter Sajji",
+                        "desc": "Quarter portion tender, flavorful charcoal-roasted Balochi chicken sajji.",
+                        "price": 750,
+                        "image": "images/quarter_sajji.jpg",
+                        "isPopular": false,
+                        "type": "fixed"
+                },
+                {
+                        "id": "full_plate_rice",
+                        "category": "sajji_rice",
+                        "name": "Full Plate Rice (Only With Sajji)",
+                        "desc": "Aromatic, long-grain spiced Sajji rice cooked in chicken broth (Exclusive with Sajji order).",
+                        "price": 400,
+                        "image": "images/full_plate_rice.jpg",
+                        "isPopular": false,
+                        "type": "fixed"
+                },
+                {
+                        "id": "half_plate_rice",
+                        "category": "sajji_rice",
+                        "name": "Half Plate Rice",
+                        "desc": "Half portion of authentic spiced aromatic Sajji rice.",
+                        "price": 250,
+                        "image": "images/half_plate_rice.jpg",
+                        "isPopular": false,
+                        "type": "fixed"
+                },
+                {
+                        "id": "kala_rahu_fried_fish",
+                        "category": "fish_specialties",
+                        "name": "Special Kala Rahu Fried Fish",
+                        "desc": "Fresh Kala Rahu fish marinated with Lahori spices, ajwain and lemon, deep fried to golden crisp.",
+                        "price": 1700,
+                        "image": "images/special_kala_rahu_fried_fish.jpg",
+                        "isPopular": true,
+                        "type": "fixed"
+                },
+                {
+                        "id": "kala_rahu_grill_fish",
+                        "category": "fish_specialties",
+                        "name": "Special Kala Rahu Grill Fish",
+                        "desc": "Tender Kala Rahu fish chargrilled over live coals with aromatic herbs and smoky lemon butter glaze.",
+                        "price": 1700,
+                        "image": "images/special_kala_rahu_grill_fish.jpg",
+                        "isPopular": false,
+                        "type": "fixed"
+                },
+                {
+                        "id": "kala_rahu_fish_sajji",
+                        "category": "fish_specialties",
+                        "name": "Special Kala Rahu Fish Sajji",
+                        "desc": "Signature Balochi style slow-roasted Kala Rahu whole fish sajji infused with smoky charcoal aroma.",
+                        "price": 2100,
+                        "image": "images/special_kala_rahu_fish_sajji.jpg",
+                        "isPopular": true,
+                        "type": "fixed"
+                },
+                {
+                        "id": "special_boneless_fish",
+                        "category": "fish_specialties",
+                        "name": "Special Boneless Fish",
+                        "desc": "Premium succulent boneless fish fillets seasoned with chef special spices and crispy fried.",
+                        "price": 3200,
+                        "image": "images/special_boneless_fish.jpg",
+                        "isPopular": false,
+                        "type": "fixed"
+                },
+                {
+                        "id": "special_boneless_fish_sajji",
+                        "category": "fish_specialties",
+                        "name": "Special Boneless Fish Sajji",
+                        "desc": "Exclusive skewered boneless fish fillets roasted slowly over charcoal with authentic Balochi sajji rub.",
+                        "price": 3600,
+                        "image": "images/special_boneless_fish_sajji.jpg",
+                        "isPopular": true,
+                        "type": "fixed"
+                },
+                {
+                        "id": "shista_boti",
+                        "category": "bbq_special",
+                        "name": "Shista Boti",
+                        "desc": "Tender chicken cubes marinated in special aromatic spices and roasted to perfection.",
+                        "image": "images/shista_boti.jpg",
+                        "isPopular": false,
+                        "type": "size_variant",
+                        "variants": [
+                                {
+                                        "name": "Single Skewer (4 Pcs)",
+                                        "price": 400,
+                                        "label": "Single"
+                                },
+                                {
+                                        "name": "Plate (16 Pcs)",
+                                        "price": 1600,
+                                        "label": "Plate"
+                                }
+                        ]
+                },
+                {
+                        "id": "rajasthani_boti",
+                        "category": "bbq_special",
+                        "name": "Rajasthani Boti",
+                        "desc": "Spicy and tangy Rajasthani style marinated chicken boti charcoal grilled with distinct spices.",
+                        "image": "images/rajasthani_boti.jpg",
+                        "isPopular": false,
+                        "type": "size_variant",
+                        "variants": [
+                                {
+                                        "name": "Single Skewer (4 Pcs)",
+                                        "price": 420,
+                                        "label": "Single"
+                                },
+                                {
+                                        "name": "Plate (16 Pcs)",
+                                        "price": 1680,
+                                        "label": "Plate"
+                                }
+                        ]
+                },
+                {
+                        "id": "malai_boti",
+                        "category": "bbq_special",
+                        "name": "Malai Boti",
+                        "desc": "Melt-in-mouth boneless chicken boti marinated in rich fresh cream, cheese, white pepper and mild spices.",
+                        "image": "images/malai_boti.jpg",
+                        "isPopular": true,
+                        "type": "size_variant",
+                        "variants": [
+                                {
+                                        "name": "Single Skewer (4 Pcs)",
+                                        "price": 380,
+                                        "label": "Single"
+                                },
+                                {
+                                        "name": "Plate (16 Pcs)",
+                                        "price": 1520,
+                                        "label": "Plate"
+                                }
+                        ]
+                },
+                {
+                        "id": "achari_boti",
+                        "category": "bbq_special",
+                        "name": "Achari Boti",
+                        "desc": "Tender chicken boti infused with tangy pickled achari spices and charcoal roasted.",
+                        "image": "images/achari_boti.jpg",
+                        "isPopular": false,
+                        "type": "size_variant",
+                        "variants": [
+                                {
+                                        "name": "Single Skewer (4 Pcs)",
+                                        "price": 380,
+                                        "label": "Single"
+                                },
+                                {
+                                        "name": "Plate (16 Pcs)",
+                                        "price": 1520,
+                                        "label": "Plate"
+                                }
+                        ]
+                },
+                {
+                        "id": "tikka_boti",
+                        "category": "bbq_special",
+                        "name": "Tikka Boti",
+                        "desc": "Classic Lahori spiced chicken tikka cubes grilled over live charcoal coals.",
+                        "image": "images/tikka_boti.jpg",
+                        "isPopular": false,
+                        "type": "size_variant",
+                        "variants": [
+                                {
+                                        "name": "Single Skewer (4 Pcs)",
+                                        "price": 280,
+                                        "label": "Single"
+                                },
+                                {
+                                        "name": "Plate (16 Pcs)",
+                                        "price": 1120,
+                                        "label": "Plate"
+                                }
+                        ]
+                },
+                {
+                        "id": "chicken_reshmi_kabab_plate",
+                        "category": "bbq_special",
+                        "name": "Chicken Reshmi Kabab Plate (6 Pcs)",
+                        "desc": "6 pieces of silky, tender minced chicken reshmi seekh kababs prepared with fresh cream and herbs.",
+                        "price": 1250,
+                        "image": "images/chicken_reshmi_kabab_plate.jpg",
+                        "isPopular": true,
+                        "type": "fixed"
+                },
+                {
+                        "id": "chicken_cheese_kabab_plate",
+                        "category": "bbq_special",
+                        "name": "Chicken Cheese Kabab Plate",
+                        "desc": "Plate of succulent minced chicken seekh kababs stuffed with rich melted cheese and grilled on charcoal.",
+                        "price": 1400,
+                        "image": "images/chicken_cheese_kabab_plate.jpg",
+                        "isPopular": true,
+                        "type": "fixed"
+                },
+                {
+                        "id": "chicken_kabab",
+                        "category": "bbq_special",
+                        "name": "Chicken Kabab",
+                        "desc": "Traditional spiced minced chicken seekh kabab grilled on live coals.",
+                        "image": "images/chicken_kabab.jpg",
+                        "isPopular": false,
+                        "type": "size_variant",
+                        "variants": [
+                                {
+                                        "name": "1 Piece",
+                                        "price": 170,
+                                        "label": "1 Pc"
+                                },
+                                {
+                                        "name": "Plate (6 Pcs)",
+                                        "price": 1020,
+                                        "label": "Plate (6 Pcs)"
+                                }
+                        ]
+                },
+                {
+                        "id": "beef_kabab",
+                        "category": "bbq_special",
+                        "name": "Beef Kabab",
+                        "desc": "Juicy and richly seasoned minced beef seekh kabab chargrilled to perfection.",
+                        "image": "images/beef_kabab.jpg",
+                        "isPopular": true,
+                        "type": "size_variant",
+                        "variants": [
+                                {
+                                        "name": "1 Piece",
+                                        "price": 170,
+                                        "label": "1 Pc"
+                                },
+                                {
+                                        "name": "Plate (6 Pcs)",
+                                        "price": 1020,
+                                        "label": "Plate (6 Pcs)"
+                                }
+                        ]
+                },
+                {
+                        "id": "chicken_piece",
+                        "category": "bbq_special",
+                        "name": "Chicken Piece (Breast / Leg)",
+                        "desc": "Quarter chicken portion (Breast or Leg) marinated in traditional fiery tikka masala and roasted on charcoal.",
+                        "image": "images/chicken_piece_breast_leg.jpg",
+                        "isPopular": true,
+                        "type": "size_variant",
+                        "variants": [
+                                {
+                                        "name": "Breast Piece (Chest)",
+                                        "price": 490,
+                                        "label": "Breast Piece"
+                                },
+                                {
+                                        "name": "Leg Piece",
+                                        "price": 490,
+                                        "label": "Leg Piece"
+                                }
+                        ]
+                },
+                {
+                        "id": "chicken_handi",
+                        "category": "handi_specialties",
+                        "name": "Chicken Handi",
+                        "desc": "Classic boneless chicken curry cooked in clay handi with rich onion-tomato gravy, butter and cream.",
+                        "price": 1650,
+                        "image": "images/chicken_handi.jpg",
+                        "isPopular": true,
+                        "type": "fixed"
+                },
+                {
+                        "id": "chicken_qasuri_handi",
+                        "category": "handi_specialties",
+                        "name": "Chicken Qasuri Handi",
+                        "desc": "Aromatic boneless chicken handi infused with fragrant Kasuri methi (fenugreek) and rich spices.",
+                        "price": 1750,
+                        "image": "images/chicken_qasuri_handi.jpg",
+                        "isPopular": false,
+                        "type": "fixed"
+                },
+                {
+                        "id": "chicken_achari_handi",
+                        "category": "handi_specialties",
+                        "name": "Chicken Achari Handi",
+                        "desc": "Zesty boneless chicken cooked in claypot with tangy pickling spices and green chilies.",
+                        "price": 1750,
+                        "image": "images/chicken_achari_handi.jpg",
+                        "isPopular": false,
+                        "type": "fixed"
+                },
+                {
+                        "id": "chicken_pudina_handi",
+                        "category": "handi_specialties",
+                        "name": "Chicken Pudina Handi",
+                        "desc": "Tender boneless chicken handi enriched with fresh mint paste and yogurt gravy.",
+                        "price": 1750,
+                        "image": "images/chicken_pudina_handi.jpg",
+                        "isPopular": false,
+                        "type": "fixed"
+                },
+                {
+                        "id": "chicken_madrasi_handi",
+                        "category": "handi_specialties",
+                        "name": "Chicken Madrasi Handi",
+                        "desc": "Bold, spicy South Asian style Madrasi handi cooked in a rich, velvety curry sauce.",
+                        "price": 1800,
+                        "image": "images/chicken_madrasi_handi.jpg",
+                        "isPopular": false,
+                        "type": "fixed"
+                },
+                {
+                        "id": "chicken_makhni_handi",
+                        "category": "handi_specialties",
+                        "name": "Chicken Makhni Handi",
+                        "desc": "Silky smooth butter and cream based tomato gravy loaded with succulent boneless chicken.",
+                        "price": 1800,
+                        "image": "images/chicken_makhni_handi.jpg",
+                        "isPopular": true,
+                        "type": "fixed"
+                },
+                {
+                        "id": "chicken_multani_handi",
+                        "category": "handi_specialties",
+                        "name": "Chicken Multani Handi",
+                        "desc": "Traditional Multani spiced boneless chicken handi cooked to perfection with roasted whole spices.",
+                        "price": 1850,
+                        "image": "images/chicken_multani_handi.jpg",
+                        "isPopular": false,
+                        "type": "fixed"
+                },
+                {
+                        "id": "chicken_cheese_handi",
+                        "category": "handi_specialties",
+                        "name": "Chicken Cheese Handi",
+                        "desc": "Rich and creamy handi topped with generous layer of melted mozzarella and cheddar cheese.",
+                        "price": 1850,
+                        "image": "images/chicken_cheese_handi.jpg",
+                        "isPopular": true,
+                        "type": "fixed"
+                },
+                {
+                        "id": "chicken_cheese_katyala",
+                        "category": "handi_specialties",
+                        "name": "Chicken Cheese Katyala",
+                        "desc": "Chef special boneless chicken tossed with melted cheese, crushed pepper and thick masala.",
+                        "price": 1850,
+                        "image": "images/chicken_cheese_katyala.jpg",
+                        "isPopular": false,
+                        "type": "fixed"
+                },
+                {
+                        "id": "khalifa_special_chicken",
+                        "category": "handi_specialties",
+                        "name": "Khalifa's Special Chicken",
+                        "desc": "Signature house masterpiece boneless chicken prepared with secret royal spices and rich nuts gravy.",
+                        "price": 1850,
+                        "image": "images/khalifas_special_chicken.jpg",
+                        "isPopular": true,
+                        "type": "fixed"
+                },
+                {
+                        "id": "chicken_jalfrazi",
+                        "category": "handi_specialties",
+                        "name": "Chicken Jalfrazi",
+                        "desc": "Stir-fried boneless chicken tossed with bell peppers, onions, tomatoes and scrambled egg in tangy gravy.",
+                        "price": 1400,
+                        "image": "images/chicken_jalfrazi.jpg",
+                        "isPopular": false,
+                        "type": "fixed"
+                },
+                {
+                        "id": "chicken_ginger",
+                        "category": "handi_specialties",
+                        "name": "Chicken Ginger",
+                        "desc": "Boneless chicken prepared with lots of fresh julienned ginger, tomatoes and fragrant green chilies.",
+                        "price": 1400,
+                        "image": "images/chicken_ginger.jpg",
+                        "isPopular": false,
+                        "type": "fixed"
+                },
+                {
+                        "id": "kabab_masala",
+                        "category": "handi_specialties",
+                        "name": "Kabab Masala",
+                        "desc": "Charcoal grilled seekh kababs simmered in a spiced onion-tomato curry.",
+                        "price": 1400,
+                        "image": "images/kabab_masala.jpg",
+                        "isPopular": false,
+                        "type": "fixed"
+                },
+                {
+                        "id": "chicken_karahi",
+                        "category": "karahis",
+                        "name": "Chicken Karahi",
+                        "desc": "Traditional Lahori chicken karahi cooked in fresh tomatoes, ginger, green chilies and freshly crushed black pepper.",
+                        "image": "images/chicken_karahi.jpg",
+                        "isPopular": true,
+                        "type": "size_variant",
+                        "variants": [
+                                {
+                                        "name": "Half Karahi",
+                                        "price": 1000,
+                                        "label": "Half (0.5 kg)"
+                                },
+                                {
+                                        "name": "Full Karahi",
+                                        "price": 1900,
+                                        "label": "Full (1.0 kg)"
+                                }
+                        ]
+                },
+                {
+                        "id": "chicken_white_karahi",
+                        "category": "karahis",
+                        "name": "Chicken White Karahi",
+                        "desc": "Rich and creamy white gravy karahi cooked with fresh yogurt, cream, white pepper and green chilies.",
+                        "image": "images/chicken_white_karahi.jpg",
+                        "isPopular": true,
+                        "type": "size_variant",
+                        "variants": [
+                                {
+                                        "name": "Half Karahi",
+                                        "price": 1200,
+                                        "label": "Half (0.5 kg)"
+                                },
+                                {
+                                        "name": "Full Karahi",
+                                        "price": 2300,
+                                        "label": "Full (1.0 kg)"
+                                }
+                        ]
+                },
+                {
+                        "id": "chicken_achari_karahi",
+                        "category": "karahis",
+                        "name": "Chicken Achari Karahi",
+                        "desc": "Zesty and spicy chicken karahi cooked with pickling spices, kalonji and green chilies.",
+                        "image": "images/chicken_achari_karahi.jpg",
+                        "isPopular": false,
+                        "type": "size_variant",
+                        "variants": [
+                                {
+                                        "name": "Half Karahi",
+                                        "price": 1200,
+                                        "label": "Half (0.5 kg)"
+                                },
+                                {
+                                        "name": "Full Karahi",
+                                        "price": 2300,
+                                        "label": "Full (1.0 kg)"
+                                }
+                        ]
+                },
+                {
+                        "id": "mutton_karahi",
+                        "category": "karahis",
+                        "name": "Mutton Karahi",
+                        "desc": "Fresh tender mutton cooked in traditional iron karahi with fresh tomatoes, ginger and desi spices.",
+                        "image": "images/mutton_karahi.jpg",
+                        "isPopular": true,
+                        "type": "size_variant",
+                        "variants": [
+                                {
+                                        "name": "Half Karahi",
+                                        "price": 2000,
+                                        "label": "Half (0.5 kg)"
+                                },
+                                {
+                                        "name": "Full Karahi",
+                                        "price": 3900,
+                                        "label": "Full (1.0 kg)"
+                                }
+                        ]
+                },
+                {
+                        "id": "desi_murgh_karahi",
+                        "category": "karahis",
+                        "name": "Desi Murgh Karahi",
+                        "desc": "Authentic organic Desi Chicken slow-cooked in traditional style with rich desi ghee and spices.",
+                        "image": "images/desi_murgh_karahi.jpg",
+                        "isPopular": false,
+                        "type": "size_variant",
+                        "variants": [
+                                {
+                                        "name": "Half Karahi",
+                                        "price": 2000,
+                                        "label": "Half (0.5 kg)"
+                                },
+                                {
+                                        "name": "Full Karahi",
+                                        "price": 3900,
+                                        "label": "Full (1.0 kg)"
+                                }
+                        ]
+                },
+                {
+                        "id": "mutton_keema",
+                        "category": "karahis",
+                        "name": "Mutton Keema",
+                        "desc": "Freshly minced mutton cooked with onions, tomatoes, green chilies, ginger and fragrant spices.",
+                        "price": 3600,
+                        "image": "images/mutton_keema.jpg",
+                        "isPopular": true,
+                        "type": "fixed"
+                },
+                {
+                        "id": "plain_naan",
+                        "category": "tandoor_bread",
+                        "name": "Plain Naan",
+                        "desc": "Freshly baked soft tandoori plain naan.",
+                        "price": 30,
+                        "image": "images/plain_naan.jpg",
+                        "isPopular": false,
+                        "type": "fixed"
+                },
+                {
+                        "id": "mix_naan",
+                        "category": "tandoor_bread",
+                        "name": "Mix Naan",
+                        "desc": "Tandoori naan garnished with mixed seeds and fresh herbs.",
+                        "price": 50,
+                        "image": "images/mix_naan.jpg",
+                        "isPopular": false,
+                        "type": "fixed"
+                },
+                {
+                        "id": "roti_per_head",
+                        "category": "tandoor_bread",
+                        "name": "Roti Per Head",
+                        "desc": "Fresh whole wheat tandoori roti (Unlimited per head dine/takeaway portion).",
+                        "price": 60,
+                        "image": "images/roti_per_head.jpg",
+                        "isPopular": false,
+                        "type": "fixed"
+                },
+                {
+                        "id": "roghni_naan",
+                        "category": "tandoor_bread",
+                        "name": "Roghni Naan",
+                        "desc": "Soft fluffy tandoori naan brushed with pure ghee and sprinkled with sesame seeds.",
+                        "price": 90,
+                        "image": "images/roghni_naan.jpg",
+                        "isPopular": true,
+                        "type": "fixed"
+                },
+                {
+                        "id": "zeera_naan",
+                        "category": "tandoor_bread",
+                        "name": "Zeera Naan",
+                        "desc": "Tandoori naan seasoned with roasted fragrant cumin seeds (zeera).",
+                        "price": 120,
+                        "image": "images/zeera_naan.jpg",
+                        "isPopular": false,
+                        "type": "fixed"
+                },
+                {
+                        "id": "kalwanji_naan",
+                        "category": "tandoor_bread",
+                        "name": "Kalwanji Naan",
+                        "desc": "Tandoori naan sprinkled with aromatic black nigella seeds (kalonji).",
+                        "price": 120,
+                        "image": "images/kalwanji_naan.jpg",
+                        "isPopular": false,
+                        "type": "fixed"
+                },
+                {
+                        "id": "garlic_naan",
+                        "category": "tandoor_bread",
+                        "name": "Garlic Naan",
+                        "desc": "Fragrant tandoori naan topped with roasted minced garlic, butter and fresh coriander.",
+                        "price": 130,
+                        "image": "images/garlic_naan.jpg",
+                        "isPopular": true,
+                        "type": "fixed"
+                },
+                {
+                        "id": "special_naan",
+                        "category": "tandoor_bread",
+                        "name": "Special Naan",
+                        "desc": "Chef special double-butter glazed extra soft tandoori naan.",
+                        "price": 150,
+                        "image": "images/special_naan.jpg",
+                        "isPopular": false,
+                        "type": "fixed"
+                },
+                {
+                        "id": "achari_naan",
+                        "category": "tandoor_bread",
+                        "name": "Achari Naan",
+                        "desc": "Spicy tandoori naan topped with tangy pickling spices.",
+                        "price": 180,
+                        "image": "images/achari_naan.jpg",
+                        "isPopular": false,
+                        "type": "fixed"
+                },
+                {
+                        "id": "cheese_naan",
+                        "category": "tandoor_bread",
+                        "name": "Cheese Naan",
+                        "desc": "Tandoori naan stuffed with generous melted mozzarella and cheddar cheese.",
+                        "price": 400,
+                        "image": "images/cheese_naan.jpg",
+                        "isPopular": true,
+                        "type": "fixed"
+                },
+                {
+                        "id": "gulab_jamun",
+                        "category": "desserts_salad",
+                        "name": "Gulab Jamun",
+                        "desc": "Warm, soft traditional khoya dumplings soaked in fragrant cardamom rose sugar syrup.",
+                        "price": 150,
+                        "image": "images/gulab_jamun.jpg",
+                        "isPopular": true,
+                        "type": "fixed"
+                },
+                {
+                        "id": "fresh_salad",
+                        "category": "desserts_salad",
+                        "name": "Fresh Salad",
+                        "desc": "Crisply sliced fresh cucumbers, tomatoes, carrots, onions and lemon wedges.",
+                        "price": 100,
+                        "image": "images/fresh_salad.jpg",
+                        "isPopular": false,
+                        "type": "fixed"
+                },
+                {
+                        "id": "raita_mint_zeera",
+                        "category": "desserts_salad",
+                        "name": "Raita (Mint / Zeera)",
+                        "desc": "Chilled seasoned fresh yogurt with your choice of garden mint or roasted cumin.",
+                        "image": "images/raita_mint_zeera.jpg",
+                        "isPopular": false,
+                        "type": "size_variant",
+                        "variants": [
+                                {
+                                        "name": "Mint Raita",
+                                        "price": 100,
+                                        "label": "Mint Raita"
+                                },
+                                {
+                                        "name": "Zeera Raita",
+                                        "price": 100,
+                                        "label": "Zeera Raita"
+                                }
+                        ]
+                },
+                {
+                        "id": "kachumar_salad",
+                        "category": "desserts_salad",
+                        "name": "Kachumar Salad",
+                        "desc": "Finely diced cucumbers, tomatoes, and onions tossed with fresh lemon juice and chaat masala.",
+                        "price": 200,
+                        "image": "images/kachumar_salad.jpg",
+                        "isPopular": false,
+                        "type": "fixed"
+                },
+                {
+                        "id": "regular_drink",
+                        "category": "beverages",
+                        "name": "Regular Drink",
+                        "desc": "Chilled 250ml soft drink can / bottle (Coke, Sprite, Fanta, Pakola).",
+                        "price": 80,
+                        "image": "images/regular_drink.jpg",
+                        "isPopular": false,
+                        "type": "fixed"
+                },
+                {
+                        "id": "mineral_water_small",
+                        "category": "beverages",
+                        "name": "Mineral Water (Small)",
+                        "desc": "500ml chilled purified mineral water bottle.",
+                        "price": 80,
+                        "image": "images/mineral_water_small.jpg",
+                        "isPopular": false,
+                        "type": "fixed"
+                },
+
+                {
+                        "id": "diet_half_liter_drink",
+                        "category": "beverages",
+                        "name": "Diet Half Liter Drink",
+                        "desc": "500ml chilled diet / zero sugar soft drink bottle.",
+                        "price": 130,
+                        "image": "images/diet_half_liter_drink.jpg",
+                        "isPopular": false,
+                        "type": "fixed"
+                },
+                {
+                        "id": "mineral_water_full",
+                        "category": "beverages",
+                        "name": "Mineral Water (Full)",
+                        "desc": "1.5 Liter large chilled purified mineral water bottle.",
+                        "price": 130,
+                        "image": "images/mineral_water_full.jpg",
+                        "isPopular": false,
+                        "type": "fixed"
+                },
+                {
+                        "id": "fresh_lime",
+                        "category": "beverages",
+                        "name": "Fresh Lime",
+                        "desc": "Freshly squeezed lime with chilled 7Up/Sprite or sparkling soda.",
+                        "price": 150,
+                        "image": "images/fresh_lime.jpg",
+                        "isPopular": true,
+                        "type": "fixed"
+                },
+                {
+                        "id": "one_point_five_liter_drink",
+                        "category": "beverages",
+                        "name": "1.5 Liter Drink",
+                        "desc": "1.5 Liter large family soft drink bottle (Coke, Sprite, Fanta, Pakola).",
+                        "price": 220,
+                        "image": "images/one_point_five_liter_drink.jpg",
+                        "isPopular": true,
+                        "type": "fixed"
+                }
+        ]
+};
+
+        // --- 2. GLOBAL APP STATE ---
+        let currentCategory = 'all';
+        let searchQuery = '';
+        let cart = [];
+        let serviceType = 'Home Delivery'; // or 'Take Away'
+        let deliveryArea = 'inside'; // 'inside' (PKR 50) or 'outside' (PKR 100)
+        const MIN_ORDER_AMOUNT = 0;
+
+        function getDeliveryFee() {
+            if (serviceType === 'Take Away') return 0;
+            return deliveryArea === 'outside' ? 100 : 50;
+        }
+
+        function handleDeliveryAreaChange(area) {
+            deliveryArea = area;
+            updateCartUI();
+        }
+        
+        // Modal state
+        let activeModalItem = null;
+        let selectedVariantIndex = 0;
+        let selectedComplimentarySide = 'Egg Fried Rice';
+        let modalQty = 1;
+
+        // --- 3. INITIALIZATION ---
+        document.addEventListener('DOMContentLoaded', () => {
+            initShopStatus();
+            renderCategories();
+            initNavAutoScroll();
+            renderProducts();
+            loadCartFromStorage();
+            updateCartUI();
+        });
+
+        // --- 4. RENDER CATEGORY PILLS & AUTO-SCROLL LOOP ---
+        let navAutoScrollId = null;
+        let isNavUserInteracting = false;
+        let navUserPauseTimeout = null;
+
+        function renderCategories() {
+            const nav = document.getElementById('categoryNav');
+            const categoriesToRender = [...MENU_DATA.categories, ...MENU_DATA.categories];
+
+            nav.innerHTML = categoriesToRender.map(cat => `
+                <button 
+                    onclick="selectCategory('${cat.id}')"
+                    class="category-pill shrink-0 px-3.5 py-2 rounded-xl text-xs font-bold transition-all duration-200 border flex items-center gap-1.5 ${
+                        currentCategory === cat.id 
+                            ? 'active bg-[#D97706] text-white border-[#4A2411] shadow-md' 
+                            : 'bg-slate-100 text-slate-800 border-slate-200 hover:border-[#D97706]'
+                    }"
+                >
+                    <span>${cat.name}</span>
+                </button>
+            `).join('');
+        }
+
+        function initNavAutoScroll() {
+            const nav = document.getElementById('categoryNav');
+            if (!nav) return;
+
+            function pauseAutoScroll() {
+                isNavUserInteracting = true;
+                clearTimeout(navUserPauseTimeout);
+                navUserPauseTimeout = setTimeout(() => {
+                    isNavUserInteracting = false;
+                }, 2500);
+            }
+
+            nav.addEventListener('touchstart', pauseAutoScroll, { passive: true });
+            nav.addEventListener('mousedown', pauseAutoScroll);
+            nav.addEventListener('wheel', pauseAutoScroll, { passive: true });
+
+            function scrollStep() {
+                if (!isNavUserInteracting) {
+                    nav.scrollLeft += 0.6;
+                    const halfWidth = nav.scrollWidth / 2;
+                    if (halfWidth > 0 && nav.scrollLeft >= halfWidth) {
+                        nav.scrollLeft = 0;
+                    }
+                }
+                navAutoScrollId = requestAnimationFrame(scrollStep);
+            }
+
+            cancelAnimationFrame(navAutoScrollId);
+            navAutoScrollId = requestAnimationFrame(scrollStep);
+        }
+
+        function selectCategory(catId) {
+            currentCategory = catId;
+            renderCategories();
+            
+            const categoryObj = MENU_DATA.categories.find(c => c.id === catId);
+            document.getElementById('currentSectionTitle').textContent = categoryObj ? categoryObj.name : 'Khalifa Sajji Menu';
+            document.getElementById('currentSectionBadge').textContent = categoryObj ? categoryObj.badge : 'All Dishes';
+            
+            isNavUserInteracting = true;
+            clearTimeout(navUserPauseTimeout);
+            navUserPauseTimeout = setTimeout(() => {
+                isNavUserInteracting = false;
+            }, 3000);
+
+            renderProducts();
+        }
+
+        // --- 5. RENDER PRODUCTS ---
+        function renderProducts() {
+            const container = document.getElementById('menuContainer');
+            const emptyState = document.getElementById('emptySearchState');
+
+            let filtered = MENU_DATA.items;
+
+            // Filter by Category
+            if (currentCategory !== 'all') {
+                filtered = filtered.filter(item => item.category === currentCategory);
+            }
+
+            // Filter by Search Query
+            if (searchQuery.trim() !== '') {
+                const query = searchQuery.toLowerCase().trim();
+                filtered = filtered.filter(item => {
+                    const matchName = item.name.toLowerCase().includes(query);
+                    const matchDesc = item.desc.toLowerCase().includes(query);
+                    const matchCategory = item.category.toLowerCase().includes(query);
+                    return matchName || matchDesc || matchCategory;
+                });
+            }
+
+            if (filtered.length === 0) {
+                container.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                return;
+            }
+
+            emptyState.classList.add('hidden');
+
+            container.innerHTML = filtered.map(item => {
+                // Calculate starting price or range
+                let priceDisplay = '';
+                let sideBadge = '';
+
+                if (item.type === 'fixed') {
+                    priceDisplay = `PKR ${item.price.toLocaleString()}/-`;
+                } else if (item.variants && item.variants.length > 0) {
+                    const minPrice = Math.min(...item.variants.map(v => v.price));
+                    priceDisplay = `From PKR ${minPrice.toLocaleString()}/-`;
+                }
+
+                
+
+                return `
+                    <div class="glass-card-light rounded-2xl p-3 shadow-sm hover:shadow-md transition-all duration-200 flex items-center gap-3 border border-slate-200">
+                        <!-- Image -->
+                        <div class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-xl overflow-hidden shrink-0 bg-slate-900 border border-slate-200">
+                            <img 
+                                src="${item.image}" 
+                                alt="${item.name}" 
+                                class="w-full h-full object-cover" 
+                                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1541696432-82c6da8ce7bf?auto=format&fit=crop&w=300&q=80'"
+                            >
+                        </div>
+
+                        <!-- Details -->
+                        <div class="flex-1 min-w-0 flex flex-col justify-between py-0.5">
+                            <div>
+                                <h3 class="font-display font-bold text-slate-900 text-sm sm:text-base leading-snug line-clamp-1">
+                                    ${item.name}
+                                </h3>
+                                <p class="text-[11px] text-slate-500 line-clamp-2 mt-0.5">
+                                    ${item.desc}
+                                </p>
+                                ${sideBadge}
+                            </div>
+
+                            <div class="mt-2 flex items-center justify-between">
+                                <div>
+                                    <span class="text-[10px] text-slate-400 font-semibold block uppercase">Price</span>
+                                    <span class="text-sm sm:text-base font-black text-[#D97706] font-display">
+                                        ${priceDisplay}
+                                    </span>
+                                </div>
+
+                                <button 
+                                    onclick="openItemModalById('${item.id}')"
+                                    class="bg-[#D97706] hover:bg-[#B45309] text-white text-xs font-black px-3.5 py-1.5 rounded-xl shadow-sm active:scale-95 transition flex items-center gap-1"
+                                >
+                                    <i class="fa-solid fa-plus text-[10px]"></i>
+                                    <span>Add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // --- 6. SEARCH HANDLER ---
+        function handleSearch(val) {
+            searchQuery = val;
+            const clearBtn = document.getElementById('clearSearchBtn');
+            if (val.trim() !== '') {
+                clearBtn.classList.remove('hidden');
+            } else {
+                clearBtn.classList.add('hidden');
+            }
+            renderProducts();
+        }
+
+        function clearSearch() {
+            document.getElementById('searchInput').value = '';
+            searchQuery = '';
+            document.getElementById('clearSearchBtn').classList.add('hidden');
+            renderProducts();
+        }
+
+        // --- 7. ITEM MODAL & SELECTION LOGIC ---
+        function openItemModalById(id) {
+            const item = MENU_DATA.items.find(i => i.id === id);
+            if (!item) return;
+
+            activeModalItem = item;
+            selectedVariantIndex = 0;
+            selectedComplimentarySide = 'Egg Fried Rice';
+            modalQty = 1;
+            document.getElementById('modalQtyDisplay').textContent = modalQty;
+
+            // Header elements
+            document.getElementById('modalItemTitle').textContent = item.name;
+            document.getElementById('modalItemDesc').textContent = item.desc;
+            document.getElementById('modalItemImage').src = item.image;
+            document.getElementById('modalItemCategoryBadge').textContent = item.category.replace('_', ' ');
+
+            const container = document.getElementById('modalOptionsContainer');
+            container.innerHTML = '';
+
+            // Handle Variant Types
+            if (item.type === 'size_variant' || item.type === 'main_course_variant') {
+                let variantsHtml = `
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-800 uppercase tracking-wider mb-2 flex items-center justify-between">
+                            <span>Select Portion / Protein:</span>
+                            <span class="text-[10px] text-[#D97706] font-extrabold">${item.variants.length} Options</span>
+                        </h4>
+                        <div class="grid grid-cols-1 gap-2">
+                            ${item.variants.map((v, idx) => `
+                                <button 
+                                    onclick="selectModalVariantIndex(${idx})" 
+                                    id="modalVariantBtn_${idx}"
+                                    class="variant-btn w-full text-left p-3 rounded-xl border text-xs font-bold transition flex items-center justify-between ${
+                                        idx === 0 
+                                            ? 'border-[#D97706] bg-[#FFFBEB] text-[#D97706] shadow-sm' 
+                                            : 'border-slate-200 bg-white text-slate-800 hover:border-[#D97706]'
+                                    }"
+                                >
+                                    <div class="flex items-center gap-2">
+                                        <span class="w-4 h-4 rounded-full border flex items-center justify-center ${idx === 0 ? 'border-[#D97706] bg-[#D97706] text-white' : 'border-slate-300'}">
+                                            ${idx === 0 ? '<i class="fa-solid fa-check text-[8px]"></i>' : ''}
+                                        </span>
+                                        <span>${v.name}</span>
+                                    </div>
+                                    <span class="font-black text-[#D97706] text-sm">PKR ${v.price.toLocaleString()}/-</span>
+                                </button>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+
+                container.innerHTML = variantsHtml;
+
+            } else {
+                // Fixed item
+                container.innerHTML = `
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-3.5 text-xs text-slate-600">
+                        <span class="font-bold text-slate-900 block mb-1">Standard Full Portion</span>
+                        Freshly prepared in traditional desi style karahi with authentic ingredients and hot spices!
+                    </div>
+                `;
+            }
+
+            updateModalPriceDisplay();
+
+            // Show Modal
+            const modal = document.getElementById('itemModal');
+            const card = document.getElementById('itemModalCard');
+            modal.classList.remove('pointer-events-none', 'opacity-0');
+            card.classList.remove('translate-y-full');
+        }
+
+        function closeItemModal() {
+            const modal = document.getElementById('itemModal');
+            const card = document.getElementById('itemModalCard');
+            card.classList.add('translate-y-full');
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.add('pointer-events-none');
+            }, 300);
+        }
+
+        function selectModalVariantIndex(index) {
+            if (!activeModalItem || !activeModalItem.variants) return;
+            selectedVariantIndex = index;
+
+            document.querySelectorAll('.variant-btn').forEach((btn, i) => {
+                if (i === index) {
+                    btn.className = 'variant-btn w-full text-left p-3 rounded-xl border text-xs font-bold transition flex items-center justify-between border-[#D97706] bg-[#FFFBEB] text-[#D97706] shadow-sm';
+                    const iconSpan = btn.querySelector('span:first-child');
+                    if (iconSpan) iconSpan.innerHTML = '<i class="fa-solid fa-check text-[8px]"></i>';
+                } else {
+                    btn.className = 'variant-btn w-full text-left p-3 rounded-xl border text-xs font-bold transition flex items-center justify-between border-slate-200 bg-white text-slate-800 hover:border-[#D97706]';
+                    const iconSpan = btn.querySelector('span:first-child');
+                    if (iconSpan) iconSpan.innerHTML = '';
+                }
+            });
+
+            // Toggle complimentary side section if main course
+            const sideSection = document.getElementById('complimentarySideSection');
+            if (sideSection && activeModalItem.category === 'main_course') {
+                const variant = activeModalItem.variants[index];
+                if (variant && variant.hasSide) {
+                    sideSection.classList.remove('hidden');
+                } else {
+                    sideSection.classList.add('hidden');
+                }
+            }
+
+            updateModalPriceDisplay();
+        }
+
+        function selectSideOption(sideName) {
+            selectedComplimentarySide = sideName;
+            document.querySelectorAll('.side-choice-card').forEach(card => {
+                const radio = card.querySelector('input[type="radio"]');
+                if (radio && radio.value === sideName) {
+                    radio.checked = true;
+                    card.classList.add('border-[#D97706]', 'bg-[#FFFBEB]/60');
+                    card.classList.remove('border-slate-200');
+                } else {
+                    card.classList.remove('border-[#D97706]', 'bg-[#FFFBEB]/60');
+                    card.classList.add('border-slate-200');
+                }
+            });
+        }
+
+        function changeModalQty(delta) {
+            modalQty = Math.max(1, modalQty + delta);
+            document.getElementById('modalQtyDisplay').textContent = modalQty;
+            updateModalPriceDisplay();
+        }
+
+        function calculateModalItemUnitPrice() {
+            if (!activeModalItem) return 0;
+            if (activeModalItem.variants && activeModalItem.variants.length > 0) {
+                return activeModalItem.variants[selectedVariantIndex].price;
+            } else {
+                return activeModalItem.price;
+            }
+        }
+
+        function updateModalPriceDisplay() {
+            const unitPrice = calculateModalItemUnitPrice();
+            const total = unitPrice * modalQty;
+            document.getElementById('modalFinalPrice').textContent = `PKR ${total.toLocaleString()}/-`;
+        }
+
+        function confirmAddToCart() {
+            if (!activeModalItem) return;
+
+            let titleName = activeModalItem.name;
+            let optionsText = '';
+            let price = activeModalItem.price;
+
+            if (activeModalItem.variants && activeModalItem.variants.length > 0) {
+                const v = activeModalItem.variants[selectedVariantIndex];
+                price = v.price;
+                titleName = `${activeModalItem.name} - ${v.name}`;
+
+                if (activeModalItem.category === 'main_course' && v.hasSide) {
+                    optionsText = `Side: ${selectedComplimentarySide}`;
+                }
+            }
+
+            const cartItemId = `${activeModalItem.id}_${selectedVariantIndex}_${optionsText}`;
+
+            const existingIndex = cart.findIndex(c => c.cartItemId === cartItemId);
+            if (existingIndex > -1) {
+                cart[existingIndex].qty += modalQty;
+            } else {
+                cart.push({
+                    cartItemId: cartItemId,
+                    id: activeModalItem.id,
+                    name: titleName,
+                    optionsText: optionsText,
+                    unitPrice: price,
+                    qty: modalQty
+                });
+            }
+
+            saveCartToStorage();
+            updateCartUI();
+            closeItemModal();
+            showToast(`Added ${modalQty}x ${titleName} to basket!`);
+        }
+
+        // --- 8. SERVICE TYPE TOGGLE (HOME DELIVERY / TAKE AWAY) ---
+        function selectServiceType(type) {
+            serviceType = type;
+            const btnDelivery = document.getElementById('serviceBtnDelivery');
+            const btnTakeAway = document.getElementById('serviceBtnTakeAway');
+            const addressContainer = document.getElementById('addressFieldContainer');
+            const deliveryAreaContainer = document.getElementById('deliveryAreaContainer');
+
+            if (type === 'Home Delivery') {
+                btnDelivery.className = 'p-2.5 rounded-xl border-2 border-[#D97706] bg-[#FFFBEB] text-[#D97706] flex items-center justify-center gap-1.5 transition font-bold';
+                btnTakeAway.className = 'p-2.5 rounded-xl border-2 border-slate-200 bg-slate-50 text-slate-700 flex items-center justify-center gap-1.5 transition font-bold';
+                if (addressContainer) addressContainer.classList.remove('hidden');
+                if (deliveryAreaContainer) deliveryAreaContainer.classList.remove('hidden');
+            } else {
+                btnTakeAway.className = 'p-2.5 rounded-xl border-2 border-[#D97706] bg-[#FFFBEB] text-[#D97706] flex items-center justify-center gap-1.5 transition font-bold';
+                btnDelivery.className = 'p-2.5 rounded-xl border-2 border-slate-200 bg-slate-50 text-slate-700 flex items-center justify-center gap-1.5 transition font-bold';
+                if (addressContainer) addressContainer.classList.add('hidden');
+                if (deliveryAreaContainer) deliveryAreaContainer.classList.add('hidden');
+            }
+            updateCartUI();
+        }
+
+        // --- 9. CART & STORAGE LOGIC ---
+        function saveCartToStorage() {
+            try {
+                localStorage.setItem('khalifa_sajji_cart', JSON.stringify(cart));
+            } catch (e) {}
+        }
+
+        function loadCartFromStorage() {
+            try {
+                const saved = localStorage.getItem('khalifa_sajji_cart');
+                if (saved) {
+                    cart = JSON.parse(saved);
+                }
+            } catch (e) {}
+        }
+
+        function updateCartUI() {
+            const totalQty = cart.reduce((acc, item) => acc + item.qty, 0);
+            const totalPrice = cart.reduce((acc, item) => acc + (item.unitPrice * item.qty), 0);
+
+            const deliveryFee = getDeliveryFee();
+            const grandTotal = totalPrice + (totalQty > 0 ? deliveryFee : 0);
+
+            // Update floating cart bar
+            const floatingBar = document.getElementById('floatingCartBar');
+            const floatingBadge = document.getElementById('floatingCartBadge');
+            const floatingTotal = document.getElementById('floatingCartTotal');
+
+            if (floatingBadge) floatingBadge.textContent = totalQty;
+            if (floatingTotal) floatingTotal.textContent = `PKR ${grandTotal.toLocaleString()}/-`;
+
+            if (totalQty > 0) {
+                floatingBar.classList.remove('translate-y-24', 'opacity-0');
+            } else {
+                floatingBar.classList.add('translate-y-24', 'opacity-0');
+            }
+
+            // Update Drawer items list
+            document.getElementById('drawerItemCountText').textContent = `${totalQty} dish${totalQty !== 1 ? 'es' : ''} selected`;
+            
+            const cartItemsList = document.getElementById('cartItemsList');
+            const emptyCartView = document.getElementById('emptyCartView');
+            const checkoutSection = document.getElementById('checkoutFormSection');
+
+            if (cart.length === 0) {
+                cartItemsList.innerHTML = '';
+                emptyCartView.classList.remove('hidden');
+                checkoutSection.classList.add('hidden');
+            } else {
+                emptyCartView.classList.add('hidden');
+                checkoutSection.classList.remove('hidden');
+
+                cartItemsList.innerHTML = cart.map((item, index) => `
+                    <div class="bg-slate-50 rounded-2xl p-3 border border-slate-200 flex items-center justify-between gap-2 text-xs">
+                        <div class="flex-1 min-w-0">
+                            <h5 class="font-bold text-slate-900 truncate">${item.name}</h5>
+                            ${item.optionsText ? `<p class="text-[10px] text-[#D97706] font-extrabold">${item.optionsText}</p>` : ''}
+                            <div class="text-xs font-black text-[#D97706] mt-0.5">
+                                PKR ${(item.unitPrice * item.qty).toLocaleString()}/-
+                            </div>
+                        </div>
+
+                        <!-- Quantity control -->
+                        <div class="flex items-center bg-white rounded-xl border border-slate-200 p-0.5 shadow-sm shrink-0">
+                            <button onclick="updateCartItemQty(${index}, -1)" class="w-6 h-6 rounded-lg bg-slate-100 text-slate-800 flex items-center justify-center text-[10px] font-bold">
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+                            <span class="w-6 text-center font-bold text-xs text-[#D97706]">${item.qty}</span>
+                            <button onclick="updateCartItemQty(${index}, 1)" class="w-6 h-6 rounded-lg bg-[#D97706] text-white flex items-center justify-center text-[10px] font-bold">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            // Update Bill Summary
+            const billSubtotal = document.getElementById('billSubtotal');
+            const deliveryFeeLabel = document.getElementById('deliveryFeeLabel');
+            const billDeliveryZoneBadge = document.getElementById('billDeliveryZoneBadge');
+            const billTotal = document.getElementById('billTotal');
+            const minOrderAlert = document.getElementById('minOrderAlert');
+            const minOrderAlertText = document.getElementById('minOrderAlertText');
+
+            if (billSubtotal) billSubtotal.textContent = `PKR ${totalPrice.toLocaleString()}/-`;
+            
+            if (deliveryFeeLabel && billDeliveryZoneBadge) {
+                if (serviceType === 'Take Away') {
+                    billDeliveryZoneBadge.textContent = 'Take Away (Free)';
+                    deliveryFeeLabel.textContent = 'PKR 0/-';
+                } else if (deliveryArea === 'outside') {
+                    billDeliveryZoneBadge.textContent = 'Outside Area (PKR 100)';
+                    deliveryFeeLabel.textContent = 'PKR 100/-';
+                } else {
+                    billDeliveryZoneBadge.textContent = 'Inside Area (PKR 50)';
+                    deliveryFeeLabel.textContent = 'PKR 50/-';
+                }
+            }
+
+            if (billTotal) billTotal.textContent = `PKR ${grandTotal.toLocaleString()}/-`;
+
+            if (minOrderAlert) {
+                if (totalPrice > 0 && totalPrice < MIN_ORDER_AMOUNT) {
+                    const diff = MIN_ORDER_AMOUNT - totalPrice;
+                    minOrderAlert.classList.remove('hidden');
+                    if (minOrderAlertText) {
+                        minOrderAlertText.textContent = `Minimum order is PKR 1,000/- (Add PKR ${diff.toLocaleString()} more to proceed)`;
+                    }
+                } else {
+                    minOrderAlert.classList.add('hidden');
+                }
+            }
+        }
+
+        function updateCartItemQty(index, delta) {
+            if (index < 0 || index >= cart.length) return;
+            cart[index].qty += delta;
+            if (cart[index].qty <= 0) {
+                cart.splice(index, 1);
+            }
+            saveCartToStorage();
+            updateCartUI();
+        }
+
+        function openCartDrawer() {
+            updateCartUI();
+            const drawer = document.getElementById('cartDrawer');
+            const card = document.getElementById('cartDrawerCard');
+            drawer.classList.remove('pointer-events-none', 'opacity-0');
+            card.classList.remove('translate-y-full');
+        }
+
+        function closeCartDrawer() {
+            const drawer = document.getElementById('cartDrawer');
+            const card = document.getElementById('cartDrawerCard');
+            card.classList.add('translate-y-full');
+            drawer.classList.add('opacity-0');
+            setTimeout(() => {
+                drawer.classList.add('pointer-events-none');
+            }, 300);
+        }
+
+        function togglePhoneModal() {
+            const modal = document.getElementById('phoneModal');
+            const card = document.getElementById('phoneModalCard');
+            if (modal.classList.contains('opacity-0')) {
+                modal.classList.remove('pointer-events-none', 'opacity-0');
+                card.classList.remove('scale-95');
+            } else {
+                card.classList.add('scale-95');
+                modal.classList.add('opacity-0');
+                setTimeout(() => {
+                    modal.classList.add('pointer-events-none');
+                }, 300);
+            }
+        }
+
+        // --- 10. PAYMENT METHOD LOGIC ---
+        function handlePaymentChange(val) {
+            const card = document.getElementById('onlinePaymentCard');
+            if (val !== 'Cash on Delivery') {
+                card.classList.remove('hidden');
+            } else {
+                card.classList.add('hidden');
+            }
+        }
+
+        function copyToClipboard(text, btnId) {
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById(btnId);
+                const orig = btn.innerHTML;
+                btn.innerHTML = `<i class="fa-solid fa-check"></i><span>Copied!</span>`;
+                btn.classList.replace('bg-[#D97706]', 'bg-[#4A2411]');
+                setTimeout(() => {
+                    btn.innerHTML = orig;
+                    btn.classList.replace('bg-[#4A2411]', 'bg-[#D97706]');
+                }, 2000);
+            });
+        }
+
+        // --- 11. WHATSAPP ORDER SUBMISSION ---
+        function submitOrderToWhatsApp() {
+            if (cart.length === 0) {
+                showToast("Your basket is empty!");
+                return;
+            }
+
+            const address = (document.getElementById('custAddress') ? document.getElementById('custAddress').value.trim() : '');
+            const notes = (document.getElementById('custNotes') ? document.getElementById('custNotes').value.trim() : '');
+            const payment = document.getElementById('custPayment').value;
+
+            if (serviceType === 'Home Delivery' && !address) {
+                showToast("Please enter your delivery address!");
+                document.getElementById('custAddress').focus();
+                return;
+            }
+
+            const totalPrice = cart.reduce((acc, item) => acc + (item.unitPrice * item.qty), 0);
+
+
+
+            const deliveryFee = getDeliveryFee();
+            const grandTotal = totalPrice + deliveryFee;
+
+            // Construct clean formatted WhatsApp text
+            let message = `*NEW ORDER - KHALIFA SAJJI (BALOCHI SAJJI & BBQ)*\n`;
+            message += `_Authentic Balochi Sajji, BBQ & Karahi • Lahore_\n`;
+            message += `----------------------------\n`;
+            message += `*ORDER TYPE:* ${serviceType.toUpperCase()}\n`;
+                        if (serviceType === 'Home Delivery') {
+                const zoneText = deliveryArea === 'outside' ? 'Outside Area-e-Iqbal (Fee: PKR 100/-)' : 'Inside Area-e-Iqbal (Fee: PKR 50/-)';
+                message += `*DELIVERY ZONE:* ${zoneText}\n`;
+                message += `*DELIVERY ADDRESS:*\n${address}\n`;
+            }
+            message += `----------------------------\n`;
+            message += `*ORDER DISHES:*\n`;
+
+            cart.forEach((item, i) => {
+                message += `${i+1}. *${item.name}* x ${item.qty}\n`;
+                if (item.optionsText) {
+                    message += `   _${item.optionsText}_\n`;
+                }
+                message += `   Price: PKR ${(item.unitPrice * item.qty).toLocaleString()}/-\n`;
+            });
+
+            message += `----------------------------\n`;
+            message += `*SUBTOTAL:* PKR ${totalPrice.toLocaleString()}/-\n`;
+            if (serviceType === 'Home Delivery') {
+                message += `*DELIVERY CHARGES:* PKR ${deliveryFee.toLocaleString()}/-\n`;
+            }
+            message += `*TOTAL PAYABLE:* PKR ${grandTotal.toLocaleString()}/-\n`;
+            message += `----------------------------\n`;
+
+            if (notes) {
+                message += `*KITCHEN INSTRUCTIONS:* ${notes}\n`;
+            }
+
+            message += `*PAYMENT METHOD:* ${payment}\n`;
+            message += `----------------------------\n`;
+            message += `_Sent via KHALIFA SAJJI Digital Menu_`;
+
+            // Open WhatsApp link
+            const encodedMsg = encodeURIComponent(message);
+            const waUrl = `https://wa.me/${RESTAURANT_CONFIG.waPrimary}?text=${encodedMsg}`;
+            window.open(waUrl, '_blank');
+
+            // Show Receipt Preview Modal
+            const deliveryAreaTitle = serviceType === 'Home Delivery' 
+                ? (deliveryArea === 'outside' ? 'Outside Area (PKR 100)' : 'Inside Area (PKR 50)') 
+                : 'Take Away (PKR 0)';
+
+            document.getElementById('receiptPreviewBox').innerHTML = `
+                <div><strong>Service:</strong> ${serviceType} (${deliveryAreaTitle})</div>
+                                ${serviceType === 'Home Delivery' ? `<div><strong>Address:</strong> ${address}</div>` : ''}
+                <div><strong>Payment:</strong> ${payment}</div>
+                <div><strong>Total Items:</strong> ${cart.length} dish(es)</div>
+                <div><strong>Subtotal:</strong> PKR ${totalPrice.toLocaleString()}/-</div>
+                ${serviceType === 'Home Delivery' ? `<div><strong>Delivery Fee:</strong> PKR ${deliveryFee}/-</div>` : ''}
+                <div class="text-[#D97706] font-bold text-sm pt-1"><strong>Total Payable:</strong> PKR ${grandTotal.toLocaleString()}/-</div>
+            `;
+
+            closeCartDrawer();
+            
+            // Clear cart
+            cart = [];
+            saveCartToStorage();
+            updateCartUI();
+
+            // Show success modal
+            setTimeout(() => {
+                const modal = document.getElementById('successModal');
+                const card = document.getElementById('successModalCard');
+                modal.classList.remove('pointer-events-none', 'opacity-0');
+                card.classList.remove('scale-95');
+            }, 400);
+        }
+
+        function closeSuccessModal() {
+            const modal = document.getElementById('successModal');
+            const card = document.getElementById('successModalCard');
+            card.classList.add('scale-95');
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.add('pointer-events-none');
+            }, 300);
+        }
+
+        // --- 12. TOAST NOTIFICATION ---
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').textContent = msg;
+            toast.classList.remove('-translate-y-16', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('-translate-y-16', 'opacity-0');
+            }, 2500);
+        }
+
+        // --- 13. LIVE SHOP OPEN / CLOSED STATUS LOGIC (GREEN 5PM-2AM / RED 2AM-5PM) ---
+        let isShopOpen = false;
+
+        function checkAutomatedShopHours() {
+            // Strictly automated: 05:00 PM (17:00) to 02:00 AM (02:00)
+            const now = new Date();
+            const hours = now.getHours();
+            return (hours >= 17 || hours < 2);
+        }
+
+        function initShopStatus() {
+            isShopOpen = checkAutomatedShopHours();
+            updateShopStatusUI();
+            
+            // Recheck every 30 seconds automatically with real-time clock
+            setInterval(() => {
+                isShopOpen = checkAutomatedShopHours();
+                updateShopStatusUI();
+            }, 30000);
+        }
+
+        function updateShopStatusUI() {
+            const badge = document.getElementById('shopStatusBadge');
+            const light = document.getElementById('shopStatusLight');
+            const text = document.getElementById('shopStatusText');
+            const hoursNotice = document.getElementById('shopHoursNotice');
+            const hoursDot = document.getElementById('shopHoursDot');
+
+            if (!badge || !light || !text) return;
+
+            if (isShopOpen) {
+                // Green Light - Open (5:00 PM to 2:00 AM)
+                badge.className = 'inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-black border transition-all duration-300 select-none bg-amber-50 text-amber-900 border-emerald-300 shadow-sm';
+                light.className = 'w-2.5 h-2.5 rounded-full status-light-green inline-block shrink-0';
+                text.textContent = 'OPEN';
+                badge.setAttribute('title', 'Shop is OPEN (05:00 PM – 02:00 AM)');
+                
+                if (hoursDot) hoursDot.className = 'w-1.5 h-1.5 rounded-full bg-amber-500 inline-block';
+                if (hoursNotice) {
+                    hoursNotice.textContent = 'Open Now (05:00 PM – 02:00 AM)';
+                    hoursNotice.className = 'text-amber-800 font-bold';
+                }
+            } else {
+                // Red Light - Closed (After 2:00 AM until 5:00 PM)
+                badge.className = 'inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-black border transition-all duration-300 select-none bg-red-50 text-red-700 border-red-300 shadow-sm';
+                light.className = 'w-2.5 h-2.5 rounded-full status-light-red inline-block shrink-0';
+                text.textContent = 'CLOSED';
+                badge.setAttribute('title', 'Shop is CLOSED (Opens at 05:00 PM)');
+                
+                if (hoursDot) hoursDot.className = 'w-1.5 h-1.5 rounded-full bg-red-500 inline-block';
+                if (hoursNotice) {
+                    hoursNotice.textContent = 'Closed Now (Opens 05:00 PM)';
+                    hoursNotice.className = 'text-red-600 font-bold';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
